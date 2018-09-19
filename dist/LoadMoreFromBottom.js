@@ -1,7 +1,8 @@
 export default class LoadMoreFromBottom {
-    constructor({ offset = 15 }) {
-        this.offset = offset;
-        this._successCallack = (data) => { };
+    constructor({ threshold = 15, interval = 25 }) {
+        this.threshold = threshold;
+        this.interval = interval;
+        this._successCallack = (response) => { };
         window.addEventListener('scroll', this.testHandler);
     }
     ;
@@ -11,7 +12,7 @@ export default class LoadMoreFromBottom {
             const winScrollTop = window.scrollY;
             const docHeight = document.documentElement.scrollHeight;
             const winHeight = window.innerHeight;
-            if (winScrollTop + winHeight + this.offset > docHeight) {
+            if (winScrollTop + winHeight + this.threshold > docHeight) {
                 this._successCallack({
                     winScrollTop,
                     docHeight,
@@ -19,7 +20,7 @@ export default class LoadMoreFromBottom {
                     event
                 });
             }
-        }, 200);
+        }, this.interval);
     }
     ;
     success(callback) {
