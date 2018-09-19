@@ -2,13 +2,13 @@ export default class LoadMoreFromBottom {
     private _successCallack: (data: any) => void;
     public offset: number;
 
-    constructor({offset}) {
+    constructor({offset=15}) {
         this.offset = offset;
         this._successCallack = (data: any) => {};
         window.addEventListener('scroll', this.testHandler);
     };
 
-    testHandler(event) {
+    testHandler(event:Event) {
         const winScrollTop = window.scrollY;
         const docHeight = document.documentElement.scrollHeight;
         const winHeight = window.innerHeight;
@@ -22,7 +22,7 @@ export default class LoadMoreFromBottom {
         }
     };
 
-    success(callback) {
+    success(callback:any) {
         this._successCallack = callback;
     };
 

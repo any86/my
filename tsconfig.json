@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "target": "es6",
+        "noImplicitAny": true,
+        "removeComments": true,
+        "preserveConstEnums": false,
+        "sourceMap": false,
+        "outDir": "./dist",
+        "lib": ["dom", "es2017"]
+    },
+    "include": [
+        "./src/*"
+    ]
+}
