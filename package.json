@@ -1,12 +1,9 @@
 {
-  "name": "utils-code",
+  "name": "useful-utils",
   "version": "0.0.1",
   "description": "我开发中常用的几个功能, 收集起来大家分享.",
   "main": "index.js",
   "dependencies": {
-    "@types/lodash": "^4.14.116",
-    "_typescript@3.0.3@typescript": "^3.0.3",
-    "lodash": "^4.17.11",
     "rimraf": "^2.6.2",
     "typescript": "^3.0.3"
   },
