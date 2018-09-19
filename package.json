@@ -1,0 +1,24 @@
+{
+  "name": "utils",
+  "version": "0.0.1",
+  "description": "我开发中常用的几个功能, 收集起来大家分享.",
+  "main": "index.js",
+  "dependencies": {
+    "typescript": "^3.0.3",
+    "_typescript@3.0.3@typescript": "^3.0.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/383514580/utils.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/383514580/utils/issues"
+  },
+  "homepage": "https://github.com/383514580/utils#readme"
+}
