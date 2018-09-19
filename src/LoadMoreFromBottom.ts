@@ -1,28 +1,46 @@
+interface Reponse {
+    winScrollTop: number;
+    docHeight: number;
+    winHeight: number;
+    event: Event;
+}
 export default class LoadMoreFromBottom {
-    private _successCallack: (data: any) => void;
-    public offset: number;
+    private _successCallack: (response: Reponse) => void;
+    private _timeoutId: number;
+    public interval: number;
+    public threshold: number;
 
-    constructor({offset=15}) {
-        this.offset = offset;
-        this._successCallack = (data: any) => {};
+    constructor({ threshold = 15, interval = 25 }) {
+        this.threshold = threshold;
+        this.interval = interval;
+        this._successCallack = (response: Reponse) => { };
         window.addEventListener('scroll', this.testHandler);
     };
 
-    testHandler(event:Event) {
-        const winScrollTop = window.scrollY;
-        const docHeight = document.documentElement.scrollHeight;
-        const winHeight = window.innerHeight;
-        if (winScrollTop + winHeight + this.offset > docHeight) {
-            this._successCallack({
-                winScrollTop,
-                docHeight,
-                winHeight,
-                event
-            });
-        }
+    /**
+     * 验证是否满足条件
+     */
+    testHandler(event: Event) {
+        clearTimeout(this._timeoutId);
+        this._timeoutId = setTimeout(() => {
+            const winScrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight;
+            const winHeight = window.innerHeight;
+            if (winScrollTop + winHeight + this.threshold > docHeight) {
+                this._successCallack({
+                    winScrollTop,
+                    docHeight,
+                    winHeight,
+                    event
+                });
+            }
+        }, this.interval);
     };
 
-    success(callback:any) {
+    /**
+     * 暴露给实例外部, 接收callback函数
+     */
+    success(callback: () => {}) {
         this._successCallack = callback;
     };
 
@@ -35,7 +53,7 @@ export default class LoadMoreFromBottom {
 // 用法:
 // import LoadMoreFromBottom from './LoadMoreFromBottom';
 // const lm = new LoadMoreFromBottom({
-//   offset: 10
+//   threshold : 15, interval : 25
 // });
 // lm.success(data => {
 //   console.log(data);

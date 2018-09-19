@@ -6,17 +6,20 @@ export default class LoadMoreFromBottom {
     }
     ;
     testHandler(event) {
-        const winScrollTop = window.scrollY;
-        const docHeight = document.documentElement.scrollHeight;
-        const winHeight = window.innerHeight;
-        if (winScrollTop + winHeight + this.offset > docHeight) {
-            this._successCallack({
-                winScrollTop,
-                docHeight,
-                winHeight,
-                event
-            });
-        }
+        clearTimeout(this._timeoutId);
+        this._timeoutId = setTimeout(() => {
+            const winScrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight;
+            const winHeight = window.innerHeight;
+            if (winScrollTop + winHeight + this.offset > docHeight) {
+                this._successCallack({
+                    winScrollTop,
+                    docHeight,
+                    winHeight,
+                    event
+                });
+            }
+        }, 200);
     }
     ;
     success(callback) {
