@@ -1,9 +1,9 @@
 interface Options {
-    isCrossOrigin: boolean,
-    beforeLoad: (data: any) => void,
-    onSuccess: (data: any) => void,
-    onError: (data: any) => void,
-    onAbort: (data: any) => void
+    isCrossOrigin?: boolean,
+    beforeLoad?: (data: any) => void,
+    onSuccess?: (data: any) => void,
+    onError?: (data: any) => void,
+    onAbort?: (data: any) => void
 };
 
 import isBase64 from './isBase64';
@@ -18,7 +18,7 @@ export default function (url: string, {
     onSuccess = () => { },
     onError = () => { },
     onAbort = () => { }
-}: Options) {
+}: Options = {}) {
     return new Promise((resolve, reject) => {
         const startTime = Date.now();
         let img = new Image();
