@@ -7,7 +7,7 @@ npm i useful-utils --save
 ## 引入
 import {xxx} from 'useful-utils/es/xxx'
 
-## 说明
+## 说明
 ### BottomTrigger
 滚动到底部触发指定回调函数
 
@@ -19,7 +19,7 @@ import {xxx} from 'useful-utils/es/xxx'
 
 #### 实例方法 
 | 方法名 | 说明 | 
-| --- | --- | --- | --- |
+| --- | --- |
 | success | 满足触发条件触发的回调函数, 函数异步返回屏幕高度 / 文档高度 / 滚动条高度 |
 | destory | 销毁实例, 停止监听 |
 
