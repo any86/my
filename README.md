@@ -5,7 +5,7 @@ utils翻译成中文 => 跑龙套的, 再大的项目也缺不了跑龙套的代
 npm i useful-utils --save
 
 ### 使用
-import {xxx} from 'useful-utils/dist/xxx'
+import {xxx} from 'useful-utils/es/xxx'
 
 #### LoadMoreFromBottom
 常见的滚动到底部触发回调的方法

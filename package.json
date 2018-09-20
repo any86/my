@@ -9,7 +9,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "build": "rimraf ./dist && tsc"
+    "build": "rimraf ./es && tsc"
   },
   "repository": {
     "type": "git",
