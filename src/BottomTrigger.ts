@@ -50,12 +50,3 @@ export default class LoadMoreFromBottom {
 };
 
 
-// 用法:
-// import LoadMoreFromBottom from './LoadMoreFromBottom';
-// const lm = new LoadMoreFromBottom({
-//   threshold : 15, interval : 25
-// });
-// lm.success(data => {
-//   console.log(data);
-// })
-// lm.destory();
