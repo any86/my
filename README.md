@@ -7,7 +7,7 @@ npm i useful-utils --save
 ## 引入
 import {xxx} from 'useful-utils/es/xxx'
 
-## 说明
+## :alien: 说明 
 ### BottomTrigger
 滚动到底部触发指定回调函数
 
@@ -19,7 +19,7 @@ import {xxx} from 'useful-utils/es/xxx'
 
 #### 实例方法 
 | 方法名 | 说明 | 
-| --- | --- | --- | --- |
+| --- | --- |
 | success | 满足触发条件触发的回调函数, 函数异步返回屏幕高度 / 文档高度 / 滚动条高度 |
 | destory | 销毁实例, 停止监听 |
 
@@ -43,7 +43,7 @@ lm.destory();
 | 参数名 | 说明 | 默认值 | 数据类型 |
 | --- | --- | --- | --- |
 | url | 图片地址 | - |string|
-| options | 配置 | - | object |
+| options | 配置 | - | object |
 
 #### options 
 | 参数名 | 说明 | 默认值 | 数据类型 |
