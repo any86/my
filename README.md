@@ -43,7 +43,7 @@ lm.destory();
 | 参数名 | 说明 | 默认值 | 数据类型 |
 | --- | --- | --- | --- |
 | url | 图片地址 | - |string|
-| options | 配置 | - | object |
+| options | 配置 | - | object |
 
 #### options 
 | 参数名 | 说明 | 默认值 | 数据类型 |
