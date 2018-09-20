@@ -7,7 +7,7 @@ npm i useful-utils --save
 ## 引入
 import {xxx} from 'useful-utils/es/xxx'
 
-## :zap: 说明
+## 说明 :zap:
 ### BottomTrigger
 滚动到底部触发指定回调函数
 
