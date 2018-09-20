@@ -7,7 +7,7 @@ npm i useful-utils --save
 ## 引入
 import {xxx} from 'useful-utils/es/xxx'
 
-## 说明 :whale:
+## :alien: 说明 
 ### BottomTrigger
 滚动到底部触发指定回调函数
 
