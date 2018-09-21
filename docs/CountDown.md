@@ -18,7 +18,10 @@
 
 ## 实例 
 ``` javascript
-let cd = new CountDown(1000,3).start();
+// 第一个参数代表倒计时的秒数
+// 第二个参数是4那么change事件中会返回'{second, minute, hour, day}', 
+// 如果是3那么返回'{second, minute, hour }', 以此类推
+let cd = new CountDown(1000,4).start();
 
 // 每1秒触发
 cd.on('change', ({second, minute, hour, day})=>{
