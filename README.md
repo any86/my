@@ -12,6 +12,10 @@ import {xxx} from 'useful-utils/es/xxx'
 滚动到底部触发回调
 [文档](https://github.com/383514580/useful-utils/blob/master/docs/BottomTrigger.md)
 
+### isBase64
+是否base64编码
+[文档](https://github.com/383514580/useful-utils/blob/master/docs/isBase64.md)
+
 ### loadImage
 图片加载
 [文档](https://github.com/383514580/useful-utils/blob/master/docs/loadImage.md)
