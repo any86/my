@@ -14,8 +14,10 @@ class CountDown {
     public precision: number;
 
     constructor(countDownNumber: number, precision: number = 3) {
-        this.countDownNumber = countDownNumber;
-        this.precision = precision;
+        if (0 < countDownNumber) {
+            this.countDownNumber = countDownNumber;
+            this.precision = precision;
+        }
     }
 
     public start(countDownNumber: number = 0) {
@@ -56,6 +58,15 @@ class CountDown {
     public resume() {
         this.start();
     };
+
+    public stop() {
+        clearTimeout(this._timeoutId);
+        this.callbacks.end.forEach(callback => {
+            callback();
+        });
+        this.countDownNumber = 0;
+
+    }
 
     /**
      * 解析数字成'秒分时日'格式
@@ -109,11 +120,3 @@ class CountDown {
         }
     }
 }
-
-
-// let cd = new CountDown(1000,3).start();
-// cd.pause();
-// cd.resume()
-
-
-
