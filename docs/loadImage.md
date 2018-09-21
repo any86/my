@@ -1,5 +1,5 @@
 # loadImage
-:alian: 加载图片函数, 支持Promise方式调用, then对应onSuccess, catch对应onError
+:alien: 加载图片函数, 支持Promise方式调用, then对应onSuccess, catch对应onError
 
 ## 函数参数 
 | 参数名 | 说明 | 默认值 | 数据类型 |
