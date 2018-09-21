@@ -8,10 +8,10 @@ npm i useful-utils --save
 import {xxx} from 'useful-utils/es/xxx'
 
 ## :alien: 说明 
-### BottomTrigger
+### BottomTrigger [文档](https://github.com/383514580/useful-utils/blob/master/docs/BottomTrigger.md)
 滚动到底部触发指定回调函数
 
-[:zap: 文档](https://github.com/383514580/useful-utils/blob/master/docs/BottomTrigger.md)
+
 
 
 ### loadImage
