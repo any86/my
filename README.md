@@ -13,6 +13,10 @@ import {xxx} from 'useful-utils/es/xxx'
 [文档](https://github.com/383514580/useful-utils/blob/master/docs/BottomTrigger.md)
 
 ### loadImage
-加载图片函数
+图片加载
 [文档](https://github.com/383514580/useful-utils/blob/master/docs/loadImage.md)
+
+### CountDown
+倒计时
+[文档](https://github.com/383514580/useful-utils/blob/master/docs/CountDown.md)
 
