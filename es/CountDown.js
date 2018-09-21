@@ -52,8 +52,10 @@ class CountDown {
                     ;
             }
         };
-        this.countDownNumber = countDownNumber;
-        this.precision = precision;
+        if (0 < countDownNumber) {
+            this.countDownNumber = countDownNumber;
+            this.precision = precision;
+        }
     }
     start(countDownNumber = 0) {
         if (0 < countDownNumber) {
@@ -91,4 +93,11 @@ class CountDown {
         this.start();
     }
     ;
+    stop() {
+        clearTimeout(this._timeoutId);
+        this.callbacks.end.forEach(callback => {
+            callback();
+        });
+        this.countDownNumber = 0;
+    }
 }
