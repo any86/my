@@ -11,7 +11,7 @@ import {xxx} from 'useful-utils/es/xxx'
 ### BottomTrigger
 滚动到底部触发指定回调函数
 
-[文档](https://github.com/383514580/useful-utils/blob/master/docs/BottomTrigger.md)
+[:zap: 文档](https://github.com/383514580/useful-utils/blob/master/docs/BottomTrigger.md)
 
 
 ### loadImage
