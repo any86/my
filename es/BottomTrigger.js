@@ -6,6 +6,9 @@ export default class LoadMoreFromBottom {
         window.addEventListener('scroll', this.testHandler);
     }
     ;
+    /**
+     * 验证是否满足条件
+     */
     testHandler(event) {
         clearTimeout(this._timeoutId);
         this._timeoutId = setTimeout(() => {
@@ -23,6 +26,9 @@ export default class LoadMoreFromBottom {
         }, this.interval);
     }
     ;
+    /**
+     * 暴露给实例外部, 接收callback函数
+     */
     success(callback) {
         this._successCallack = callback;
     }
