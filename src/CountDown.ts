@@ -1,10 +1,10 @@
+// ⏳倒计时
 interface TimeData {
     day?: string;
     hour?: string;
     minute?: string;
     second: string;
 }
-// 倒计时
 class CountDown {
     private _timeoutId: number;
     private callbacks: { [propName: string]: ((data?: any) => void)[] };
@@ -18,7 +18,12 @@ class CountDown {
         this.precision = precision;
     }
 
-    public start() {
+    public start(countDownNumber: number = 0) {
+        // 如果指定数字按照指定数字倒计时
+        // 否则按照实例上已有的数字倒计时
+        if (0 < countDownNumber) {
+            this.countDownNumber = countDownNumber;
+        }
         // 倒计时
         if (0 < this.countDownNumber) {
             this._timeoutId = setTimeout(() => {
@@ -37,7 +42,6 @@ class CountDown {
                 callback();
             });
         }
-        return this;
     };
 
     public on(eventName: string, callback: (data: TimeData) => void) {
@@ -46,7 +50,11 @@ class CountDown {
     };
 
     public pause() {
-        return this;
+        clearTimeout(this._timeoutId);
+    };
+
+    public resume() {
+        this.start();
     };
 
     /**
