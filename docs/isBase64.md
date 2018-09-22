@@ -15,3 +15,6 @@
 ``` javascript
 isBase64('https://avatars1.githubusercontent.com/u/8264787?s=460&v=4'); // false
 ```
+
+## 源码
+[查看](https://github.com/383514580/useful-utils/blob/master/src/isBase64.ts)

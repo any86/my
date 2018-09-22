@@ -25,3 +25,7 @@ lm.success(data => {
 
 lm.destory();
 ```
+
+## 源码
+[查看](https://github.com/383514580/useful-utils/blob/master/src/BottomTrigger.ts)
+
