@@ -6,7 +6,9 @@ npm i useful-utils --save
 
 ## 引入
 import BottomTrigger from 'useful-utils/es/BottomTrigger'
+
 import isBase64 from 'useful-utils/es/isBase64'
+
 import loadImage from 'useful-utils/es/loadImage'
 ...
 
