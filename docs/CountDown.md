@@ -42,3 +42,6 @@ cd.resume();
 // 停止并置0
 cd.stop();
 ```
+
+## 源码
+[查看](https://github.com/383514580/useful-utils/blob/master/src/CountDown.ts)
