@@ -1,13 +1,13 @@
 # CountDown
 ⏳倒计时 
 
-### 构造函数参数 
+## 构造函数参数 
 | 参数名 | 说明 | 默认值 | 数据类型 |
 | --- | --- | --- | --- |
 | countDownNumber | 倒计时秒数 | - |number|
 | precision | 显示到'秒分时日'的那一阶段 | 3 | number |
 
-### 实例方法 
+## 实例方法 
 | 方法名 | 说明 | 参数| 
 | --- | --- | --- |
 | start | 开始倒计时 | - |
@@ -16,7 +16,7 @@
 | stop | 停止倒计时, 并置0 | - |
 | on | 监听函数, 支持`end`和 `change`| - |
 
-### 实例 
+## 实例 
 ``` javascript
 // 第一个参数代表倒计时的秒数
 // 第二个参数是4那么change事件中会返回'{second, minute, hour, day}', 
@@ -43,5 +43,5 @@ cd.resume();
 cd.stop();
 ```
 
-### 源码
+## 源码
 [查看](https://github.com/383514580/useful-utils/blob/master/src/CountDown.ts)
