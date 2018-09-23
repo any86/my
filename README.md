@@ -5,7 +5,14 @@ utils翻译成中文 => 跑龙套的, 再大的项目也缺不了跑龙套的代
 npm i useful-utils --save
 
 ## 引入
-import {xxx} from 'useful-utils/es/xxx'
+import BottomTrigger from 'useful-utils/es/BottomTrigger'
+
+import isBase64 from 'useful-utils/es/isBase64'
+
+import loadImage from 'useful-utils/es/loadImage'
+
+...
+
 
 ## :alien: 说明 
 ### BottomTrigger 
