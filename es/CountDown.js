@@ -1,4 +1,4 @@
-class CountDown {
+export default class CountDown {
     constructor(countDownNumber, precision = 3) {
         this._parseCountDownNumber = (number, precision = 1) => {
             switch (precision) {
