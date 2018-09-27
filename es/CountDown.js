@@ -56,11 +56,23 @@ export default class CountDown {
             this.countDownNumber = countDownNumber;
             this.precision = precision;
             this.callbacks = {};
+            this._isPause = false;
+            this._isStop = false;
+        }
+        else {
+            console.warn('CountDown: 请输入一个大于0的数字');
         }
     }
     start(countDownNumber = 0) {
         if (0 < countDownNumber) {
             this.countDownNumber = countDownNumber;
+        }
+        if (this._isStop) {
+            this.countDownNumber = 0;
+        }
+        if (this._isPause) {
+            clearTimeout(this._timeoutId);
+            return;
         }
         if (0 < this.countDownNumber) {
             this._timeoutId = setTimeout(() => {
@@ -94,18 +106,15 @@ export default class CountDown {
     }
     ;
     pause() {
-        clearTimeout(this._timeoutId);
+        this._isPause = true;
     }
     ;
     resume() {
+        this._isPause = false;
         this.start();
     }
     ;
     stop() {
-        clearTimeout(this._timeoutId);
-        this.callbacks.end.forEach(callback => {
-            callback();
-        });
-        this.countDownNumber = 0;
+        this._isStop = true;
     }
 }

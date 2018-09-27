@@ -15,6 +15,11 @@
         let cd = new CountDown(3,4).start();
         cd.on('change', e=>{
             console.log(e);
+            cd.stop();
+
+            // setTimeout(()=>{
+            //     cd.resume();
+            // }, 1000)
         })
 
         cd.on('end', ()=>{

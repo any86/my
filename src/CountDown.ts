@@ -6,6 +6,8 @@ interface TimeData {
     second: string;
 }
 export default class CountDown {
+    private _isPause: boolean;
+    private _isStop: boolean;
     private _timeoutId: number;
     private callbacks: { [propName: string]: ((data?: any) => void)[] };
 
@@ -18,15 +20,29 @@ export default class CountDown {
             this.countDownNumber = countDownNumber;
             this.precision = precision;
             this.callbacks = {};
+            this._isPause = false;
+            this._isStop = false;
+        } else {
+            console.warn('CountDown: 请输入一个大于0的数字');
         }
     }
 
     public start(countDownNumber: number = 0) {
-        // 如果指定数字按照指定数字倒计时
-        // 否则按照实例上已有的数字倒计时
         if (0 < countDownNumber) {
             this.countDownNumber = countDownNumber;
         }
+
+        // 判断是否停止
+        if (this._isStop) {
+            this.countDownNumber = 0;
+        }
+
+        // 判断是否暂停
+        if (this._isPause) {
+            clearTimeout(this._timeoutId);
+            return;
+        }
+
         // 倒计时
         if (0 < this.countDownNumber) {
             this._timeoutId = setTimeout(() => {
@@ -51,28 +67,30 @@ export default class CountDown {
     };
 
     public on(eventName: string, callback: (data: TimeData) => void) {
-        if(undefined === this.callbacks[eventName]) {
+        if (undefined === this.callbacks[eventName]) {
             this.callbacks[eventName] = [];
         }
         this.callbacks[eventName].push(callback);
         return this;
     };
 
+    /**
+     * 暂停倒计时
+     */
     public pause() {
-        clearTimeout(this._timeoutId);
+        this._isPause = true;
     };
 
+    /**
+     * 恢复倒计时
+     */
     public resume() {
+        this._isPause = false;
         this.start();
     };
 
     public stop() {
-        clearTimeout(this._timeoutId);
-        this.callbacks.end.forEach(callback => {
-            callback();
-        });
-        this.countDownNumber = 0;
-
+        this._isStop = true;
     }
 
     /**
