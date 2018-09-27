@@ -76,9 +76,11 @@ export default class CountDown {
         }
         else {
             clearTimeout(this._timeoutId);
-            this.callbacks.end.forEach(callback => {
-                callback();
-            });
+            if (undefined !== this.callbacks.end) {
+                this.callbacks.end.forEach(callback => {
+                    callback();
+                });
+            }
         }
         return this;
     }
