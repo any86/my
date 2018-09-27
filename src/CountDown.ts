@@ -15,7 +15,7 @@ export default class CountDown {
     public countDownNumber: number;
     public precision: number;
 
-    constructor(countDownNumber: number, precision: number = 3) {
+    constructor(countDownNumber: number, precision: number = 4) {
         if (0 < countDownNumber) {
             this.countDownNumber = countDownNumber;
             this.precision = precision;

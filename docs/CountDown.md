@@ -5,7 +5,7 @@
 | 参数名 | 说明 | 默认值 | 数据类型 |
 | --- | --- | --- | --- |
 | countDownNumber | 倒计时秒数 | - |number|
-| precision | 显示到'秒分时日'的那一阶段 | 3 | number |
+| precision | 显示到'秒分时日'的那一阶段 | 4 | number |
 
 ## 实例方法 
 | 方法名 | 说明 | 参数| 
@@ -21,7 +21,7 @@
 // 第一个参数代表倒计时的秒数
 // 第二个参数是4那么change事件中会返回'{second, minute, hour, day}', 
 // 如果是3那么返回'{second, minute, hour }', 以此类推
-let cd = new CountDown(1000,4).start();
+let cd = new CountDown(1000, 4).start();
 
 // 每1秒触发
 cd.on('change', ({second, minute, hour, day})=>{
