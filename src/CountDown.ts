@@ -17,6 +17,7 @@ class CountDown {
         if (0 < countDownNumber) {
             this.countDownNumber = countDownNumber;
             this.precision = precision;
+            this.callbacks = {};
         }
     }
 
@@ -31,12 +32,12 @@ class CountDown {
             this._timeoutId = setTimeout(() => {
                 this.countDownNumber--;
                 let timeData: TimeData = this._parseCountDownNumber(this.countDownNumber, this.precision);
-
                 if (undefined !== this.callbacks.change) {
                     this.callbacks.change.forEach(callback => {
                         callback(timeData);
                     });
                 }
+                this.start();
             }, 1000);
         } else {
             clearTimeout(this._timeoutId);
@@ -44,9 +45,13 @@ class CountDown {
                 callback();
             });
         }
+        return this;
     };
 
     public on(eventName: string, callback: (data: TimeData) => void) {
+        if(undefined === this.callbacks[eventName]) {
+            this.callbacks[eventName] = [];
+        }
         this.callbacks[eventName].push(callback);
         return this;
     };

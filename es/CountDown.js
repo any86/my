@@ -55,6 +55,7 @@ class CountDown {
         if (0 < countDownNumber) {
             this.countDownNumber = countDownNumber;
             this.precision = precision;
+            this.callbacks = {};
         }
     }
     start(countDownNumber = 0) {
@@ -70,6 +71,7 @@ class CountDown {
                         callback(timeData);
                     });
                 }
+                this.start();
             }, 1000);
         }
         else {
@@ -78,9 +80,13 @@ class CountDown {
                 callback();
             });
         }
+        return this;
     }
     ;
     on(eventName, callback) {
+        if (undefined === this.callbacks[eventName]) {
+            this.callbacks[eventName] = [];
+        }
         this.callbacks[eventName].push(callback);
         return this;
     }

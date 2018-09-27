@@ -1,6 +1,6 @@
 {
   "name": "useful-utils",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "我开发中常用的几个功能, 收集起来大家分享.",
   "main": "index.js",
   "dependencies": {
@@ -9,7 +9,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "build": "rimraf ./es && tsc"
+    "build": "rimraf ./es && tsc",
+    "watch": "tsc --watch"
   },
   "repository": {
     "type": "git",
