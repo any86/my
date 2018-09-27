@@ -5,7 +5,7 @@ interface TimeData {
     minute?: string;
     second: string;
 }
-class CountDown {
+export default class CountDown {
     private _timeoutId: number;
     private callbacks: { [propName: string]: ((data?: any) => void)[] };
 
