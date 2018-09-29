@@ -18,10 +18,32 @@
 
 ## 实例 
 ``` javascript
-loadImage('https://avatars1.githubusercontent.com/u/8264787?s=460&v=4').then(data=>{
-    console(data);
-}).catch(data=>{
-    console(data);
+loadImage('https://avatars1.githubusercontent.com/u/8264787?s=460&v=4').then(({
+    img,
+    width,
+    height,
+    costTime,
+    nativeEvent})=>{
+    console.log({
+        img,
+        width,
+        height,
+        costTime,
+        nativeEvent
+    });
+}).catch(({
+    img,
+    width,
+    height,
+    costTime,
+    nativeEvent})=>{
+    console.log({
+        img,
+        width,
+        height,
+        costTime,
+        nativeEvent
+    });
 });
 ```
 

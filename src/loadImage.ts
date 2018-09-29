@@ -29,7 +29,6 @@ export default function (url: string, {
         img.onload = event => {
             let data = {
                 img: img,
-                isComplete: false,
                 width: img.width,
                 height: img.height,
                 costTime: Date.now() - startTime,

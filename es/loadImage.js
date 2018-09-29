@@ -11,7 +11,6 @@ export default function (url, { isCrossOrigin = false, beforeLoad = () => { }, o
         img.onload = event => {
             let data = {
                 img: img,
-                isComplete: false,
                 width: img.width,
                 height: img.height,
                 costTime: Date.now() - startTime,

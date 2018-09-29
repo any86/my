@@ -1,5 +1,5 @@
 export default class CountDown {
-    constructor(countDownNumber, precision = 3) {
+    constructor(countDownNumber, precision = 4) {
         this._parseCountDownNumber = (number, precision = 1) => {
             switch (precision) {
                 case 1:
