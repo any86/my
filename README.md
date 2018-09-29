@@ -6,6 +6,7 @@ npm i useful-utils --save
 
 ## 引入
 import BottomTrigger from 'useful-utils/es/BottomTrigger'
+
 ...
 
 ## :alien: 说明 
