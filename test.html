@@ -11,20 +11,10 @@
 <body>
 
     <script type="module">
-        import CountDown from './es/CountDown.js';
-        let cd = new CountDown(207928,4).start();
-        cd.on('change', e=>{
-            console.log(e);
-            // cd.stop();
+        import isPointInPolygon from './es/isPointInPolygon.js';
+        let isOut = isPointInPolygon({x:10, y:10}, [{x:0,y:0}, {x:100,y:0},{x:100,y:100},{x:0,y:100}]);
+        console.log(isOut);
 
-            // setTimeout(()=>{
-            //     cd.resume();
-            // }, 1000)
-        })
-
-        cd.on('end', ()=>{
-            console.log('end');
-        })
     </script>
 </body>
 
