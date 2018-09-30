@@ -7,7 +7,6 @@
     "rimraf": "^2.6.2",
     "typescript": "^3.0.3"
   },
-  "devDependencies": {},
   "scripts": {
     "build": "rimraf ./es && tsc",
     "watch": "tsc --watch"

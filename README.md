@@ -26,3 +26,6 @@ import BottomTrigger from 'useful-utils/es/BottomTrigger'
 倒计时
 [文档](https://github.com/383514580/useful-utils/blob/master/docs/CountDown.md)
 
+### isPointInPolygon
+判断点是否在多边形内部
+[文档](https://github.com/383514580/useful-utils/blob/master/docs/isPointInPolygon.md)
