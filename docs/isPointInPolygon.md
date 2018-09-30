@@ -14,7 +14,9 @@
 
 ## 实例 
 ``` javascript
-let isIn = isPointInPolygon({x:10, y:10}, [{x:0,y:0}, {x:100,y:0},{x:100,y:100},{x:0,y:100}]);
+const pointer = {x:10, y:10};
+const polygon = [{x:0,y:0}, {x:100,y:0},{x:100,y:100},{x:0,y:100}];
+let isIn = isPointInPolygon(pointer, polygon);
 console.log(isIn);  // true
 ```
 
