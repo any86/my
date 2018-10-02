@@ -5,7 +5,7 @@ utils翻译成中文 => 跑龙套的, 再大的项目也缺不了跑龙套的代
 npm i useful-utils --save
 
 ## 引入
-import BottomTrigger from 'useful-utils/es/BottomTrigger'
+import BottomTrigger from 'useful-utils/`es`/BottomTrigger'
 
 ...
 
