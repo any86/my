@@ -4,7 +4,7 @@
 ## 函数参数 
 | 参数名 | 说明 | 默认值 | 数据类型 |
 | --- | --- | --- | --- |
-| {x: number, y: number, angle: number, centerX: number, centerY: number} |  圆上x坐标, y坐标, 旋转角度,圆心坐标x, 圆心坐标y | - | `Object` |
+| {x: number, y: number, angle: number, centerX: number, centerY: number} |  x: 圆上x坐标, y: y坐标, angle: 旋转角度, centerX: 圆心坐标x, centerY: 圆心坐标y | - | `Object` |
 
 ## 函数返回
 | 说明 | 数据类型 |
