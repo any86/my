@@ -1,5 +1,5 @@
 # useful-utils
-utils翻译成中文 => 跑龙套的, 再大的项目也缺不了跑龙套的代码.
+utils翻译成中文 => **跑龙套的**, 再大的项目也缺不了跑龙套的代码.
 
 ## 安装
 npm i useful-utils --save
