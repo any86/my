@@ -15,15 +15,15 @@
 
 ## 实例 
 ``` javascript
-const lm = new BottomTrigger({
+const bt = new BottomTrigger({
     threshold : 15, interval : 25
 });
 
-lm.success(data => {
+bt.success(data => {
     console.log(data);
 });
 
-lm.destory();
+bt.destory();
 ```
 
 ## 源码
