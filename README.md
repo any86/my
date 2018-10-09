@@ -26,3 +26,6 @@ import BottomTrigger from 'useful-utils/es/BottomTrigger'
 倒计时
 [文档](https://github.com/383514580/useful-utils/blob/master/docs/CountDown.md)
 
+### FontStyleBuilder
+生成字体css
+[文档](https://github.com/383514580/useful-utils/blob/master/docs/FontStyleBuilder.md)
