@@ -29,7 +29,7 @@ fsb.remove('ArchitectsDaughter')
 
 // 删除字体对应的整个<style>
 setTimeout(()=>{
-    fsb.destroyed();
+    fsb.destroy();
 
 }, 1000)
 ```

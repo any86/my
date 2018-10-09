@@ -72,7 +72,7 @@ export default class {
     /**
      * 销毁当前<style>
      */
-    destroyed() {
+    destroy() {
         this.map = null;
         this.headNode.removeChild(this.styleNode);
     };
