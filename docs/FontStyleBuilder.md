@@ -1,11 +1,6 @@
 # FontStyleBuilder
 :alien: 生成字体css, 暂时只支持传入一个字体(ttf格式)
 
-## 构造函数参数 
-| 参数名 | 说明 | 默认值 | 数据类型 |是否必填 |
-| --- | --- | --- | --- |--- |
-| id | 生成的`<style>`元素的id | - |string| 否 |
-
 ## 实例方法 
 | 方法名 | 说明 | 参数| 
 | --- | --- | --- |
@@ -15,6 +10,8 @@
 
 ## 实例 
 ``` javascript
+import Fsb from 'useful-utils/es/FontStyleBuilder';
+
 let fsb = new Fsb({id: 'fsb'});
 // 添加字体到<style>
 fsb.add({
