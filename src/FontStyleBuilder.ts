@@ -53,7 +53,7 @@ export default class {
      * @param {String} 字体名 
      */
     remove(fontFamily: string) {
-        let willMap = {};
+        let willMap: {[propName:string]:string} = {};
         for (let [oldFontFamily, url]  of Object.entries(this.map)) {
             if(fontFamily !== oldFontFamily) {
                 willMap[oldFontFamily] = url;
