@@ -11,7 +11,7 @@ export default class {
     /**
      * @param {String} style元素的id
      */
-    constructor({id}: {id: string}) {
+    constructor({id}: {id: string}={}) {
         this.headNode = document.getElementsByTagName('head')[0];
         this.styleNode = document.createElement('style');
         this.styleNode.setAttribute('type', 'text/css');
