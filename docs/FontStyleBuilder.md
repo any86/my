@@ -16,6 +16,7 @@
 ## 实例 
 ``` javascript
 import Fsb from 'useful-utils/es/FontStyleBuilder';
+
 let fsb = new Fsb({id: 'fsb'});
 // 添加字体到<style>
 fsb.add({
