@@ -11,9 +11,23 @@
 <body>
 
     <script type="module">
-        import isPointInPolygon from './es/isPointInPolygon.js';
-        let isOut = isPointInPolygon({x:10, y:10}, [{x:0,y:0}, {x:100,y:0},{x:100,y:100},{x:0,y:100}]);
-        console.log(isOut);
+        import Fsb from './es/FontStyleBuilder.js';
+        let fsb = new Fsb({id: 'fsb'});
+        fsb.add({
+            url: 'https://jer.imaiyuan.com/skin/frontend/smartwave/default/fonts/VineMonogramsSolid.ttf', 
+            fontFamily: 'VineMonogramsSolid'
+        });
+
+        fsb.add({
+            url: 'https://jer.imaiyuan.com/skin/frontend/smartwave/default/fonts/ArchitectsDaughter.ttf', 
+            fontFamily: 'ArchitectsDaughter'
+        });
+
+        fsb.remove('ArchitectsDaughter')
+        setTimeout(()=>{
+            fsb.destroyed();
+
+        }, 1000)
 
     </script>
 </body>

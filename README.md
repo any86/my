@@ -37,3 +37,6 @@ import **BottomTrigger** from **'useful-utils/es/BottomTrigger'**
 ### afterRoateXY
 求圆上的任意点p在圆旋转指定角度后的新坐标
 [文档](https://github.com/383514580/useful-utils/blob/master/docs/afterRoateXY.md)
+### FontStyleBuilder
+生成字体css
+[文档](https://github.com/383514580/useful-utils/blob/master/docs/FontStyleBuilder.md)
