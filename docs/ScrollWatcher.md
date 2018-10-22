@@ -19,7 +19,7 @@ const bt = new ScrollWatcher({
     threshold : window.innerHeight/3, interval : 25
 });
 
-bt.on('done', data => {
+bt.on('reach-bottom', data => {
     console.log(data);
 });
 

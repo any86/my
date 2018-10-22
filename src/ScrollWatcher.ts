@@ -35,7 +35,7 @@ export default class ScrollWatcher {
             const docHeight = document.documentElement.scrollHeight;
             const winHeight = window.innerHeight;
             if (winScrollTop + winHeight + this.threshold > docHeight) {
-                this.eventBus.emit('done', {
+                this.eventBus.emit('reach-bottom', {
                     winScrollTop,
                     docHeight,
                     winHeight,
