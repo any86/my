@@ -10,9 +10,9 @@ import **BottomTrigger** from **'useful-utils/esm/BottomTrigger'**
 ...
 
 ## :alien: 说明 
-### BottomTrigger 
-滚动到底部触发回调
-[文档](https://github.com/383514580/useful-utils/blob/master/docs/BottomTrigger.md)
+### ScrollWatcher
+页面滚动的观察者,默认页面滚动到底部触发
+[文档](https://github.com/383514580/useful-utils/blob/master/docs/ScrollWatcher.md)
 
 ### isBase64
 是否base64编码

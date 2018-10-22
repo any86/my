@@ -9,25 +9,30 @@
 </head>
 
 <body>
-
+    <div style="height:200vh;background:#f90;">
+    </div>
+    <script src="./test.ts"></script>
     <script type="module">
-        import Fsb from './es/FontStyleBuilder.js';
-        let fsb = new Fsb({id: 'fsb'});
-        fsb.add({
-            url: 'https://jer.imaiyuan.com/skin/frontend/smartwave/default/fonts/VineMonogramsSolid.ttf', 
-            fontFamily: 'VineMonogramsSolid'
-        });
+        // import ScrollWatcher from './esm/ScrollWatcher.js';
+        // let sw = new ScrollWatcher();
+        // sw.success(()=>{
+        //     console.log(123);
+        // })
 
-        fsb.add({
-            url: 'https://jer.imaiyuan.com/skin/frontend/smartwave/default/fonts/ArchitectsDaughter.ttf', 
-            fontFamily: 'ArchitectsDaughter'
-        });
+        // import EventBus from './esm/EventBus.js';
 
-        fsb.remove('ArchitectsDaughter')
-        setTimeout(()=>{
-            fsb.destroyed();
+        // let eb = new EventBus();
+        
+        // // eb.on('abc', a=>{
+        // //     console.log(a);
+        // // })
 
-        }, 1000)
+        // document.addEventListener('abc', data=>{
+        //     console.log(data);
+        // });
+
+
+        // eb.emit('abc',{abcasdasd:213123});
 
     </script>
 </body>
