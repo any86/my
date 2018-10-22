@@ -7,7 +7,7 @@ export default class ScrollWatcher {
     public threshold: number;
     public eventBus: any;
 
-    constructor({ threshold = window.innerHeight * 0.3, interval = 25 } = {}) {
+    constructor({ threshold = window.innerHeight * 0.3, interval = 200 } = {}) {
         this.threshold = threshold;
         this.interval = interval;
         // 事件管理器
