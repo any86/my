@@ -1,11 +1,11 @@
 import EventBus from './eventBus';
 export default class ScrollWatcher {
-    constructor({ threshold = 15, interval = 25 } = {}) {
+    constructor({ threshold = window.innerHeight * 0.3, interval = 200 } = {}) {
         this.threshold = threshold;
         this.interval = interval;
         this.eventBus = new EventBus();
-        const handler = this.scrollHandler.bind(this);
-        window.addEventListener('scroll', handler);
+        this._boundScrollHandler = this.scrollHandler.bind(this);
+        window.addEventListener('scroll', this._boundScrollHandler);
     }
     ;
     on(eventName, handler) {
@@ -31,7 +31,7 @@ export default class ScrollWatcher {
     ;
     destory() {
         this.eventBus.destory();
-        window.removeEventListener('scroll', this.scrollHandler);
+        window.removeEventListener('scroll', this._boundScrollHandler);
     }
 }
 ;
