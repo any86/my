@@ -1,24 +1,19 @@
 
 import EventBus from './eventBus';
-interface Reponse {
-    winScrollTop: number;
-    docHeight: number;
-    winHeight: number;
-    event: Event;
-}
 export default class ScrollWatcher {
     private _timeoutId: number;
+    private _boundScrollHandler: () => void;
     public interval: number;
     public threshold: number;
     public eventBus: any;
 
-    constructor({ threshold = 15, interval = 25 } = {}) {
+    constructor({ threshold = window.innerHeight * 0.3, interval = 25 } = {}) {
         this.threshold = threshold;
         this.interval = interval;
         // 事件管理器
         this.eventBus = new EventBus();
-        const handler = this.scrollHandler.bind(this);
-        window.addEventListener('scroll', handler);
+        this._boundScrollHandler = this.scrollHandler.bind(this);
+        window.addEventListener('scroll', this._boundScrollHandler);
     };
 
     /**
@@ -26,7 +21,7 @@ export default class ScrollWatcher {
      * @param 事件名 
      * @param 接收函数
      */
-    on(eventName: string, handler: () => void) {
+    on(eventName: string, handler: (data: object) => void) {
         this.eventBus.on(eventName, handler);
     };
 
@@ -52,7 +47,7 @@ export default class ScrollWatcher {
 
     destory() {
         this.eventBus.destory();
-        window.removeEventListener('scroll', this.scrollHandler);
+        window.removeEventListener('scroll', this._boundScrollHandler);
     }
 };
 
