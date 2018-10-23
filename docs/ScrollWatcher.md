@@ -4,7 +4,7 @@
 ## 构造函数参数 
 | 参数名 | 说明 | 默认值 | 数据类型 |
 | --- | --- | --- | --- |
-| threshold | 距离底部多少像素触发回调, 默认屏幕高度的30% | window.innerHeight*0.3 |number|
+| bottom | 距离底部多少像素触发回调, 默认屏幕高度的30% | window.innerHeight*0.3 |number|
 | interval | 多久ms发生一次触发 | 200 | number |
 
 ## 实例方法 
@@ -16,7 +16,7 @@
 ## 实例 
 ``` javascript
 const bt = new ScrollWatcher({
-    threshold : window.innerHeight/3, interval : 25
+    bottom : window.innerHeight/3, interval : 25
 });
 
 bt.on('reach-bottom', data => {

@@ -4,11 +4,11 @@ export default class ScrollWatcher {
     private _timeoutId: number;
     private _boundScrollHandler: () => void;
     public interval: number;
-    public threshold: number;
+    public bottom: number;
     public eventBus: any;
 
-    constructor({ threshold = window.innerHeight * 0.3, interval = 200 } = {}) {
-        this.threshold = threshold;
+    constructor({ bottom = window.innerHeight * 0.3, interval = 200 } = {}) {
+        this.bottom = bottom;
         this.interval = interval;
         // 事件管理器
         this.eventBus = new EventBus();
@@ -34,7 +34,7 @@ export default class ScrollWatcher {
             const winScrollTop = window.scrollY;
             const docHeight = document.documentElement.scrollHeight;
             const winHeight = window.innerHeight;
-            if (winScrollTop + winHeight + this.threshold > docHeight) {
+            if (winScrollTop + winHeight + this.bottom > docHeight) {
                 this.eventBus.emit('reach-bottom', {
                     winScrollTop,
                     docHeight,
