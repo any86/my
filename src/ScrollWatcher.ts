@@ -37,27 +37,27 @@ export default class ScrollWatcher {
     scrollHandler(event: Event) {
         clearTimeout(this._timeoutId);
         this._timeoutId = window.setTimeout(() => {
-            const winScrollTop = window.scrollY;
-            const docHeight = document.documentElement.scrollHeight;
-            const winHeight = window.innerHeight;
+            const scrollTop = window.scrollY;
+            const contentHeight = document.documentElement.scrollHeight;
+            const viewHeight = window.innerHeight;
             const payload = {
-                winScrollTop,
-                docHeight,
-                winHeight,
+                scrollTop,
+                contentHeight,
+                viewHeight,
                 event
             };
 
             this.eventBus.emit('scroll', payload);
 
-            const direction = (winScrollTop > ScrollWatcher.lastScrollTop) ? 'down' : 'up';
+            const direction = (scrollTop > ScrollWatcher.lastScrollTop) ? 'down' : 'up';
             this.eventBus.emit(`scroll-${direction}`, payload);
-            ScrollWatcher.lastScrollTop = winScrollTop;
+            ScrollWatcher.lastScrollTop = scrollTop;
             // 滚动触发
 
             // 触底触发
-            if (winScrollTop + winHeight + this.bottom > docHeight) {
+            if (scrollTop + viewHeight + this.bottom > contentHeight) {
                 this.eventBus.emit('reach-bottom', payload);
-            } else if (winScrollTop < this.top) {
+            } else if (scrollTop < this.top) {
                 this.eventBus.emit('reach-top', payload);
             }
         }, this.interval);
