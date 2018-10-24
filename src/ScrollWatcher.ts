@@ -27,8 +27,17 @@ export default class ScrollWatcher {
      * @param 事件名 
      * @param 接收函数
      */
-    on(eventName: string, handler: (data: object) => void) {
-        this.EventEmitter.on(eventName, handler);
+    on(type: string, listener: (data: object) => void) {
+        this.EventEmitter.on(type, listener);
+    };
+
+    /**
+     * 解绑监听事件
+     * @param 事件名 
+     * @param 接收函数
+     */
+    off(type: string, listener: (data: object) => void){
+        this.EventEmitter.off(type, listener);
     };
 
     /**
