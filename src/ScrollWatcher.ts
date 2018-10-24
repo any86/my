@@ -1,12 +1,12 @@
 
-import EventBus from './eventBus';
+import EventEmitter from './EventEmitter';
 export default class ScrollWatcher {
     private _timeoutId: number;
     private _boundScrollHandler: () => void;
     public interval: number;
     public top: number;
     public bottom: number;
-    public eventBus: any;
+    public EventEmitter: any;
     static lastScrollTop: number;
     constructor({
         bottom = window.innerHeight * 0.3,
@@ -17,7 +17,7 @@ export default class ScrollWatcher {
         this.bottom = bottom;
         this.interval = interval;
         // 事件管理器
-        this.eventBus = new EventBus();
+        this.EventEmitter = new EventEmitter();
         this._boundScrollHandler = this.scrollHandler.bind(this);
         window.addEventListener('scroll', this._boundScrollHandler);
     };
@@ -28,7 +28,7 @@ export default class ScrollWatcher {
      * @param 接收函数
      */
     on(eventName: string, handler: (data: object) => void) {
-        this.eventBus.on(eventName, handler);
+        this.EventEmitter.on(eventName, handler);
     };
 
     /**
@@ -47,24 +47,24 @@ export default class ScrollWatcher {
                 event
             };
 
-            this.eventBus.emit('scroll', payload);
+            this.EventEmitter.emit('scroll', payload);
 
             const direction = (scrollTop > ScrollWatcher.lastScrollTop) ? 'down' : 'up';
-            this.eventBus.emit(`scroll-${direction}`, payload);
+            this.EventEmitter.emit(`scroll-${direction}`, payload);
             ScrollWatcher.lastScrollTop = scrollTop;
             // 滚动触发
 
             // 触底触发
             if (scrollTop + viewHeight + this.bottom > contentHeight) {
-                this.eventBus.emit('reach-bottom', payload);
+                this.EventEmitter.emit('reach-bottom', payload);
             } else if (scrollTop < this.top) {
-                this.eventBus.emit('reach-top', payload);
+                this.EventEmitter.emit('reach-top', payload);
             }
         }, this.interval);
     };
 
     destory() {
-        this.eventBus.destory();
+        this.EventEmitter.destory();
         window.removeEventListener('scroll', this._boundScrollHandler);
     }
 };
