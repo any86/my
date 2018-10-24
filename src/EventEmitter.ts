@@ -11,7 +11,7 @@ interface Stack {
 // 待绑定事件目标
 type Target = Element | Document | Window;
 
-export default class EventBus {
+export default class EventEmitter {
     private _stack: Stack;
     public target: Target;
     public hasDomEvent: boolean;

@@ -1,6 +1,6 @@
 ;
 ;
-export default class EventBus {
+export default class EventEmitter {
     constructor(target = document, { hasDomEvent = false } = {}) {
         this._stack = {};
         this.target = target;
