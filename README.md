@@ -1,15 +1,25 @@
-# useful-utils
+# useful-utils [![NPM Version][npm-image]][npm-url] [![NPM Downloads][downloads-image]][downloads-url] 
 utils翻译成中文 => **跑龙套**, 再大的项目也缺不了跑龙套的代码.
 
+[npm-image]: https://img.shields.io/npm/v/useful-utils.svg
+[npm-url]: https://npmjs.org/package/useful-utils
+
+[downloads-image]: https://img.shields.io/npm/dm/useful-utils.svg
+[downloads-url]: https://npmjs.org/package/useful-utils
+
+
 ## 安装
+
 npm i useful-utils --save
 
 ## 引入
+
 import **BottomTrigger** from **'useful-utils/esm/BottomTrigger'**
 
 ...
 
 ## :alien: 说明 
+
 ### ScrollWatcher
 页面滚动的观察者,默认页面滚动到底部触发
 [文档](https://github.com/383514580/useful-utils/blob/master/docs/ScrollWatcher.md)
