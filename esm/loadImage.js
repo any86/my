@@ -1,27 +1,30 @@
+"use strict";
+exports.__esModule = true;
 ;
-import isBase64 from './isBase64';
-export default function (url, { isCrossOrigin = false, beforeLoad = () => { }, onSuccess = () => { }, onError = () => { }, onAbort = () => { } } = {}) {
-    return new Promise((resolve, reject) => {
-        const startTime = Date.now();
-        let img = new Image();
-        if (!isBase64(url)) {
+var isBase64_1 = require("./isBase64");
+function default_1(url, _a) {
+    var _b = _a === void 0 ? {} : _a, _c = _b.isCrossOrigin, isCrossOrigin = _c === void 0 ? false : _c, _d = _b.beforeLoad, beforeLoad = _d === void 0 ? function () { } : _d, _e = _b.onSuccess, onSuccess = _e === void 0 ? function () { } : _e, _f = _b.onError, onError = _f === void 0 ? function () { } : _f, _g = _b.onAbort, onAbort = _g === void 0 ? function () { } : _g;
+    return new Promise(function (resolve, reject) {
+        var startTime = Date.now();
+        var img = new Image();
+        if (!isBase64_1["default"](url)) {
             if (isCrossOrigin)
                 img.crossOrigin = 'anonymous';
         }
-        img.onload = event => {
-            let data = {
+        img.onload = function (event) {
+            var data = {
                 img: img,
                 width: img.width,
                 height: img.height,
                 costTime: Date.now() - startTime,
-                nativeEvent: event,
+                nativeEvent: event
             };
             onSuccess(data);
             resolve(data);
         };
-        img.onerror = event => {
-            let data = {
-                url,
+        img.onerror = function (event) {
+            var data = {
+                url: url,
                 img: img,
                 costTime: Date.now() - startTime,
                 nativeEvent: event,
@@ -31,11 +34,11 @@ export default function (url, { isCrossOrigin = false, beforeLoad = () => { }, o
             reject(data);
             img.src = null;
         };
-        img.onabort = event => {
-            let data = {
+        img.onabort = function (event) {
+            var data = {
                 img: img,
                 costTime: Date.now() - startTime,
-                nativeEvent: event,
+                nativeEvent: event
             };
             onAbort(data);
             reject(data);
@@ -44,4 +47,5 @@ export default function (url, { isCrossOrigin = false, beforeLoad = () => { }, o
         beforeLoad(img);
     });
 }
+exports["default"] = default_1;
 ;

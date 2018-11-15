@@ -1,6 +1,6 @@
 {
     "name": "useful-utils",
-    "version": "0.1.8",
+    "version": "0.1.9",
     "description": "开发中常用的几个功能, 收集起来大家分享.",
     "main": "index.js",
     "devDependencies": {
@@ -10,7 +10,7 @@
     },
     "scripts": {
         "build": "rimraf ./esm && tsc",
-        "release": "npm run build && npm pub",
+        "release": "rimraf ./esm && npm run build && npm pub",
         "watch": "tsc --watch",
         "dev": "parcel test.html"
     },
