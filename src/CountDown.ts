@@ -45,7 +45,7 @@ export default class CountDown {
 
         // 倒计时
         if (0 < this.countDownNumber) {
-            this._timeoutId = setTimeout(() => {
+            this._timeoutId = window.setTimeout(() => {
                 this.countDownNumber--;
                 let timeData: TimeData = this._parseCountDownNumber(this.countDownNumber, this.precision);
                 if (undefined !== this.callbacks.change) {

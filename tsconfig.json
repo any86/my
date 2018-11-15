@@ -5,7 +5,7 @@
         "removeComments": true,
         "preserveConstEnums": false,
         "sourceMap": false,
-        "outDir": "./es",
+        "outDir": "./esm",
         "lib": ["dom", "es2017"]
     },
     "include": [

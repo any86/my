@@ -11,10 +11,10 @@
 | 参数名 | 说明 | 默认值 | 数据类型 |
 | --- | --- | --- | --- |
 | isCrossOrigin | url是否跨域 | false |boolean|
-| beforeLoad | 图片加载前钩子, data中返回图片尺寸信息等) | (data) => { } | function |
-| onSuccess | 图片加载成功钩子 | (data) => { } | function |
-| onError | 发生错误狗钩子 | (data) => { } | function |
-| onAbort | 放弃加载钩子 | (data) => { } | function |
+| beforeLoad | 图片加载前触发的回调, data中返回图片尺寸信息等) | (data) => { } | function |
+| onSuccess | 图片加载成功触发的回调 | (data) => { } | function |
+| onError | 发生错误触发的回调 | (data) => { } | function |
+| onAbort | 放弃加载触发的回调| (data) => { } | function |
 
 ## 实例 
 ``` javascript

@@ -75,7 +75,7 @@ export default class CountDown {
             return;
         }
         if (0 < this.countDownNumber) {
-            this._timeoutId = setTimeout(() => {
+            this._timeoutId = window.setTimeout(() => {
                 this.countDownNumber--;
                 let timeData = this._parseCountDownNumber(this.countDownNumber, this.precision);
                 if (undefined !== this.callbacks.change) {

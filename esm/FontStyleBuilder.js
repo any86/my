@@ -1,12 +1,9 @@
 export default class {
-    constructor({ id }) {
+    constructor() {
         this.headNode = document.getElementsByTagName('head')[0];
         this.styleNode = document.createElement('style');
         this.styleNode.setAttribute('type', 'text/css');
         this.map = {};
-        if (undefined !== id) {
-            this.styleNode.setAttribute('id', id);
-        }
     }
     ;
     add({ url, fontFamily }) {
@@ -38,7 +35,7 @@ export default class {
             this.add({ url, fontFamily });
         }
     }
-    destroyed() {
+    destroy() {
         this.map = null;
         this.headNode.removeChild(this.styleNode);
     }
