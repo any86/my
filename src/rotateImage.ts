@@ -16,11 +16,9 @@ export default (img: HTMLImageElement, angle: number): string => {
     const canvas = document.createElement('canvas');
     const ctx = canvas.getContext('2d') as CanvasRenderingContext2D;
     const rect = calcRect(img.width, img.height, angle);
-    console.log(rect);
     canvas.width = rect.width;
     canvas.height = rect.height;
     ctx.save();
-    // ctx.fillRect(0,0,rect.width,rect.height);
     ctx.translate(rect.width / 2, rect.height / 2);
     ctx.rotate(angle * Math.PI / 180);
     ctx.translate(- img.width / 2, -img.height / 2);
@@ -28,4 +26,3 @@ export default (img: HTMLImageElement, angle: number): string => {
     ctx.restore();
     return canvas.toDataURL('image/png');
 };
-
