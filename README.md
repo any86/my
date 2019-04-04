@@ -50,3 +50,7 @@ import **BottomTrigger** from **'useful-utils/esm/BottomTrigger'**
 ### FontStyleBuilder
 生成字体css
 [文档](https://github.com/383514580/useful-utils/blob/master/docs/FontStyleBuilder.md)
+
+### rotateImage
+生成字体css
+[文档](https://github.com/383514580/useful-utils/blob/master/docs/rotateImage.md)
