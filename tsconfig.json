@@ -1,11 +1,13 @@
 {
     "compilerOptions": {
-        "target": "es3",
+        "target": "es5",
+        "module": "es6",
         "noImplicitAny": true,
+        // "strict": true,
         "removeComments": true,
         "preserveConstEnums": false,
         "sourceMap": false,
-        "outDir": "./esm",
+        "outDir": "./lib",
         "lib": ["dom", "es2017"]
     },
     "include": [

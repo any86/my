@@ -3,16 +3,15 @@
     "version": "0.1.9",
     "description": "开发中常用的几个功能, 收集起来大家分享.",
     "main": "index.js",
+    "files": ["lib", "dist"],
     "devDependencies": {
-        "parcel-bundler": "^1.10.3",
         "rimraf": "^2.6.2",
         "typescript": "^3.0.3"
     },
     "scripts": {
-        "build": "rimraf ./esm && tsc",
-        "release": "rimraf ./esm && npm run build && npm pub",
-        "watch": "tsc --watch",
-        "dev": "parcel test.html"
+        "build": "rimraf ./lib && tsc",
+        "release": "rimraf ./lib && npm run build && npm pub",
+        "dev": "tsc --watch"
     },
     "repository": {
         "type": "git",

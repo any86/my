@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="box" style="height:150vh;">
+        <img id="img">
+    </div>
+    <script type="module" src="./lib/rotateImage.js"></script>
+    <script type="module">
+        import rotateImage from './lib/rotateImage.js';
+        const img = new Image();
+        img.onload = ()=>{
+            let base64 = rotateImage(img, 90);
+            let el = document.getElementById('img')
+            el.setAttribute('src', base64);
+            // el.width = img.width;
+            // el.height = img.height;
+        };
+        img.src = './4.jpg';
+    </script>
+</body>
+
+</html>
