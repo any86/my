@@ -52,5 +52,5 @@ import **BottomTrigger** from **'useful-utils/esm/BottomTrigger'**
 [文档](https://github.com/383514580/useful-utils/blob/master/docs/FontStyleBuilder.md)
 
 ### rotateImage
-生成字体css
+旋转图片
 [文档](https://github.com/383514580/useful-utils/blob/master/docs/rotateImage.md)
