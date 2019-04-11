@@ -57,5 +57,5 @@ import **BottomTrigger** from **'useful-utils/esm/BottomTrigger'**
 
 
 ### greyImage
-旋转图片
+灰化图片
 [文档](https://github.com/383514580/useful-utils/blob/master/docs/greyImage.md)
