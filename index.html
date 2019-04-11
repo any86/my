@@ -12,16 +12,15 @@
     <div id="box" style="height:150vh;">
         <img id="img">
     </div>
-    <script type="module" src="./lib/rotateImage.js"></script>
+    <script type="module" src="./lib/greyImage.js"></script>
     <script type="module">
-        import rotateImage from './lib/rotateImage.js';
+        import greyImage from './lib/greyImage.js';
         const img = new Image();
         img.onload = ()=>{
-            let base64 = rotateImage(img, 90);
-            let el = document.getElementById('img')
+            const base64 = greyImage(img);
+            console.log(base64);
+            let el = document.getElementById('img');
             el.setAttribute('src', base64);
-            // el.width = img.width;
-            // el.height = img.height;
         };
         img.src = './4.jpg';
     </script>

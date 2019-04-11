@@ -54,3 +54,8 @@ import **BottomTrigger** from **'useful-utils/esm/BottomTrigger'**
 ### rotateImage
 旋转图片
 [文档](https://github.com/383514580/useful-utils/blob/master/docs/rotateImage.md)
+
+
+### greyImage
+旋转图片
+[文档](https://github.com/383514580/useful-utils/blob/master/docs/greyImage.md)
