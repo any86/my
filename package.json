@@ -1,12 +1,14 @@
 {
-    "name": "useful-utils",
-    "version": "0.1.10",
-    "description": "开发中常用的几个功能, 收集起来大家分享.",
-    "main": "index.js",
-    "files": ["lib", "dist"],
+    "name": "6h",
+    "version": "0.0.1",
+    "private": true,
+    "workspaces": [
+        "packages/*"
+    ],
+    "description": "做最轻最硬的代码!",
     "devDependencies": {
-        "rimraf": "^2.6.2",
-        "typescript": "^3.0.3"
+        "lerna": "^3.19.0",
+        "rimraf": "^2.6.2"
     },
     "scripts": {
         "build": "rimraf ./lib && tsc",
@@ -15,12 +17,13 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/383514580/utils.git"
+        "url": "git+https://github.com/any86/6h.git"
     },
-    "author": "",
+    "author": "any86",
     "license": "ISC",
     "bugs": {
-        "url": "https://githu b.com/383514580/utils/issues"
+        "url": "https://github.com/any86/6h/issues"
     },
-    "homepage": "https://github.com/383514580/utils#readme"
+    "homepage": "https://github.com/any86/6h#readme",
+    "sideEffects": false
 }

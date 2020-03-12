@@ -1,56 +1,24 @@
-# useful-utils [![NPM Version][npm-image]][npm-url] [![NPM Downloads][downloads-image]][downloads-url] 
-utils翻译成中文 => **跑龙套**, 再大的项目也缺不了跑龙套的代码.
+# 6h(轻代码)
+✏️ 做最**轻**最**硬**的代码!
 
-[npm-image]: https://img.shields.io/npm/v/useful-utils.svg
-[npm-url]: https://npmjs.org/package/useful-utils
+## 初心
+1. 使用最少代码实现一个完整功能, 让大家更容易学习ts.
+2. 目标代码轻量, 方便大家用更少的碎片时间来参与项目.
+3. 做很多"轻代码", 希望总有一块成为你的"砖".
 
-[downloads-image]: https://img.shields.io/npm/dm/useful-utils.svg
-[downloads-url]: https://npmjs.org/package/useful-utils
+## 加入
+本项目使用lerna管理, 操作如下: xxx
 
+## 要求
+1. 代码编译后体积不能超过1kb.
+2. 尽量以函数形态暴露给开发者.
 
-## 安装
+## 说明 
 
-npm i useful-utils --save
-
-## 引入
-
-import **BottomTrigger** from **'useful-utils/esm/BottomTrigger'**
-
-...
-
-## :alien: 说明 
-
-### ScrollWatcher
-页面滚动的观察者,默认页面滚动到底部触发
-[文档](https://github.com/383514580/useful-utils/blob/master/docs/ScrollWatcher.md)
-
-### isBase64
-是否base64编码
-[文档](https://github.com/383514580/useful-utils/blob/master/docs/isBase64.md)
-
-### loadImage
-图片加载
-[文档](https://github.com/383514580/useful-utils/blob/master/docs/loadImage.md)
-
-### CountDown
-倒计时
-[文档](https://github.com/383514580/useful-utils/blob/master/docs/CountDown.md)
-
-### isPointInPolygon
-判断点是否在多边形内部
-[文档](https://github.com/383514580/useful-utils/blob/master/docs/isPointInPolygon.md)
-
-### angle2rad
-角度转弧度
-[文档](https://github.com/383514580/useful-utils/blob/master/docs/angle2rad.md)
-
-### afterRoateXY
-求圆上的任意点p在圆旋转指定角度后的新坐标
-[文档](https://github.com/383514580/useful-utils/blob/master/docs/afterRoateXY.md)
-### FontStyleBuilder
-生成字体css
-[文档](https://github.com/383514580/useful-utils/blob/master/docs/FontStyleBuilder.md)
-
-### rotateImage
-生成字体css
-[文档](https://github.com/383514580/useful-utils/blob/master/docs/rotateImage.md)
+### clickOutSide
+#### 安装
+```
+npm i -S @6hb/clickOutside
+```
+#### 文档
+https://github.com/any86/6h/clickOutside
