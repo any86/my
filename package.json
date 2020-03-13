@@ -7,7 +7,7 @@
     ],
     "description": "做最轻最硬的代码!",
     "devDependencies": {
-        "lerna": "^3.19.0",
+        "lerna": "^3.20.2",
         "rimraf": "^2.6.2"
     },
     "scripts": {

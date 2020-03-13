@@ -2,6 +2,9 @@
   "name": "@6h/be-full",
   "version": "0.0.3",
   "description": "🍔 任意元素全屏显示",
+  "publishConfig": {
+    "access": "public"
+  },
   "types": "types/index.d.ts",
   "scripts": {
     "demo": "npm run build && node scripts/demo",
@@ -33,5 +36,6 @@
     "terser": "^4.6.6",
     "ts-jest": "^25.2.1",
     "typescript": "^3.8.3"
-  }
+  },
+  "gitHead": "8186ca6911416479ddc2079113f442c721da0db4"
 }
