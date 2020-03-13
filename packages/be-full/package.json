@@ -1,6 +1,6 @@
 {
   "name": "@6h/be-full",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "🍔 任意元素全屏显示",
   "publishConfig": {
     "access": "public"
