@@ -1,0 +1,10 @@
+{
+    "extends": "../../tsconfig.json",
+    "compilerOptions": {
+    "outDir": "dist",
+        "declarationDir": "types",
+    },
+    "include": [
+        "src/index.ts","src/global.d.ts"
+    ]
+}
