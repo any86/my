@@ -1,6 +1,6 @@
 {
   "name": "@6h/click-outside",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "点击指定元素之外触发",
   "types": "types/index.d.ts",
   "keywords": [
