@@ -21,7 +21,7 @@
     "url": "git+https://github.com/any86/6h.git"
   },
   "scripts": {
-    "test":"jest",
+    "test": "jest",
     "dev": "rimraf dist && tsc -w",
     "build": "rimraf dist && tsc && terser dist/index.js -o dist/index.min.js"
   },
@@ -31,6 +31,7 @@
   "devDependencies": {
     "@types/jest": "^25.1.4",
     "jest": "^25.1.0",
+    "jest-puppeteer": "^4.4.0",
     "rimraf": "^3.0.2",
     "terser": "^4.6.6",
     "ts-jest": "^25.2.1",

@@ -11,6 +11,7 @@
         "rimraf": "^2.6.2"
     },
     "scripts": {
+        "test": "jest",
         "build": "rimraf ./lib && tsc",
         "release": "rimraf ./lib && npm run build && npm pub",
         "dev": "tsc --watch"
