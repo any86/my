@@ -6,19 +6,11 @@
 2. 目标代码轻量, 方便大家用更少的碎片时间来参与项目.
 3. 做很多"轻代码", 希望总有一块成为你的"砖".
 
-## 加入
-本项目使用lerna管理, 操作如下: xxx
-
-## 要求
-1. 代码编译后体积不能超过1kb.
-2. 尽量以函数形态暴露给开发者.
+🔥 欢迎大家贡献代码一起玩.
 
 ## 说明 
+[be-full](packages/be-full/README.md)
+全屏任意元素.
 
-### clickOutSide
-#### 安装
-```
-npm i -S @6hb/clickOutside
-```
-#### 文档
-https://github.com/any86/6h/clickOutside
+[click-outSide](packages/click-outside/README.md)
+点击指定元素外部触发回调.

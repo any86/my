@@ -1,7 +1,8 @@
-# be-full [![NPM Version][npm-image]][npm-url]
+# be-full 
+[![NPM Version][npm-image]][npm-url]
 
-[npm-image]: https://badgen.net/npm/v/be-full
-[npm-url]: https://npmjs.org/package/be-full
+[npm-image]: https://badgen.net/npm/v/@6h/be-full
+[npm-url]: https://npmjs.org/package/@6h/be-full
 
 🍔 任意元素**全屏**显示, 支持PC/移动端, 不到**1kb**.
 
