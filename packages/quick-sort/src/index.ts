@@ -47,7 +47,7 @@ function swap(array: unknown[], i: number, j: number) {
  * @param endIndex 结束索引
  * @returns 
  */
-export function quickSort<Item = number>(array: Item[], compareFn: Compare<Item> = compareNumber as any): Item[] {
+export default function quickSort<Item = number>(array: Item[], compareFn: Compare<Item> = compareNumber as any): Item[] {
     const startIndex = 0;
     const endIndex = array.length - 1;
 

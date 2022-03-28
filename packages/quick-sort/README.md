@@ -1,59 +1,26 @@
-# be-full 
+# @any86/quick-sort
 [![NPM Version][npm-image]][npm-url]
 
-[npm-image]: https://badgen.net/npm/v/@6h/be-full
-[npm-url]: https://npmjs.org/package/@6h/be-full
+[npm-image]: https://badgen.net/npm/v/@any86/quick-sort
+[npm-url]: https://npmjs.org/package/@any86/quick-sort
 
-🍔 任意元素**全屏**显示, 支持PC/移动端, 不到**1kb**.
-
-## 在线演示
-[:rocket: 演示](https://any86.github.io/be-full/example/)
+快速排序, 原地排序, 非递归版本.
 
 ## 安装
-
 ```shell
-npm i -S be-full
+npm i -S @any86/quick-sort
 ```
 
 ## 快速开始
 
 ```javascript
-import {beFull} from 'be-full';
+import qSort from '@any86/quick-sort';
 
-// 整个网页全屏显示
-beFull();
+// 正序排列
+const array1 = [100,1,99];
+const arraySorted = qSort(array);
 
-// 指定元素全屏
-beFull(document.getElementById('video'));
-```
-
-## 🔥更多API(4个函数)
-
-### exitFull(退出全屏)
-```javascript
-exitFull();
-```
-
-### toggleFull(切换全屏/退出)
-使用方法同`beFull`, 只是第二次点击会执行`exitFull`
-```javascript
-toggleFull();
-
-// 切换指定元素全屏/退出
-toggleFull(document.getElementById('video'));
-```
-
-### isFull(元素是否全屏)
-```javascript
-isFull(document.getElementById('video'));
-```
-
-### watchFull(监视元素全屏状态变化)
-```javascript
-const {cancel} = watchFull(document.documentElement, ev => {
-    // 全屏状态变化执行         
-});
-
-// 取消监听
-cancel();
+// 倒序排列, 指定排序的字段
+const array1 = [{a:100},{a:1},{a:99}];
+const array1Sorted = qSort(array1, (a,b)=>b.a-a.a);
 ```

@@ -18,6 +18,6 @@ module.exports = {
     },
     moduleFileExtensions: ['ts', 'tsx', 'js', 'json'],
     moduleNameMapper: {
-        '^@6h/(.*?)$': '<rootDir>/packages/$1/src',
+        '^@any86/(.*?)$': '<rootDir>/packages/$1/src',
     },
 };
