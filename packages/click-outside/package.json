@@ -11,6 +11,7 @@
     "clickOutside",
     "click-outside"
   ],
+  "files": ["dist"],
   "author": "any86",
   "homepage": "https://github.com/any86/my/packages/clickOutside#readme",
   "license": "ISC",
