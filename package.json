@@ -1,26 +1,28 @@
 {
-    "name": "useful-utils",
-    "version": "0.1.10",
-    "description": "开发中常用的几个功能, 收集起来大家分享.",
-    "main": "index.js",
-    "files": ["lib", "dist"],
+    "name": "my",
+    "version": "0.0.0",
+    "private": true,
+    "workspaces": [
+        "packages/*"
+    ],
+    "description": "常用的代码集合",
     "devDependencies": {
-        "rimraf": "^2.6.2",
-        "typescript": "^3.0.3"
+        "lerna": "^4.0.0",
+        "rimraf": "^3.0.2"
     },
     "scripts": {
-        "build": "rimraf ./lib && tsc",
-        "release": "rimraf ./lib && npm run build && npm pub",
-        "dev": "tsc --watch"
+        "release:next": "lerna publish --force-publish --dist-tag next",
+        "release:latest": "lerna publish --force-publish"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/383514580/utils.git"
+        "url": "git+https://github.com/any86/my.git"
     },
-    "author": "",
+    "author": "any86",
     "license": "ISC",
     "bugs": {
-        "url": "https://githu b.com/383514580/utils/issues"
+        "url": "https://github.com/any86/my/issues"
     },
-    "homepage": "https://github.com/383514580/utils#readme"
+    "homepage": "https://github.com/any86/my#readme",
+    "sideEffects": false
 }
