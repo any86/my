@@ -10,42 +10,34 @@
 
 ## 有什么?
 
-[@any86/my](packages/be-full)
-全屏任意元素.
+[@any86/quick-sort](packages/quick-sort)
+快速排序.
 
 [@any86/click-outside](packages/click-outside)
 点击指定元素外部触发回调.
 
-## 贡献代码
-
-1. 运行`yarn`, 如没有 yarn 请先执行`npm i -g yarn`
-2. 复制**packages**文件夹中任意项目, 然后改名, 比如'**packages/abc**'.
-3. 进入"**abc**"目录, 修改"**package.json**"的"**name**"字段为"**@any86/abc**".
-4. 在"**any86**"目录执行命令`lerna bootstrap`.
-5. 代码写在"**packages/abc/index.ts**"中.
-6. 测试用例写在"**packages/abc/**test**/**"中.
-7. 运行`yarn workspace abc test`执行测试, 无误后提交代码.
 
 ## 📚 typescript 基础
 
-[第一课, 体验 typescript](https://juejin.im/post/5d19ad6de51d451063431864)
+[第一课, 体验typescript](https://juejin.im/post/6844904008583217165)
 
-[第二课, 基础类型和入门高级类型](https://juejin.im/post/5d1af3426fb9a07ed4411a9b)
+[第二课, 基础类型和入门高级类型](https://juejin.im/post/6844904008583233544)
 
-[第三课, 泛型](https://juejin.im/post/5d27f160e51d45108223fcf9)
+[第三课, 泛型](https://juejin.im/post/6844904008587411463)
 
-[第四课, 解读高级类型](https://juejin.im/post/5d3fe80fe51d456206115987)
+[第四课, 解读高级类型](https://juejin.im/post/6844903902563794952)
 
-[第五课, 命名空间(namespace)是什么](https://juejin.im/post/5d5d04dfe51d4561af16dd24)
+[第五课, 命名空间(namespace)是什么](https://juejin.im/post/6844903921031479309)
 
-[特别篇, 在 vue3🔥 源码中学会 typescript🦕 - "is"](https://juejin.im/post/5da6d1aae51d4524ad10d1d8)
+[特别篇, 在vue3🔥源码中学会typescript🦕 - "is"](https://juejin.im/post/6844903967877513230)
 
-[第六课, 什么是声明文件(declare)? 🦕 - 全局声明篇](https://juejin.im/post/5dcbc9e2e51d451bcb39f123)
+[第六课, 什么是声明文件(declare)? 🦕 - 全局声明篇](https://juejin.im/post/6844903993727008776)
 
-[新手前端学 🔥typescript - 实战篇, 实现浏览器全屏(59 行)](https://juejin.im/post/5dd33ce3e51d453fbf29e0e5)
+[第七课, 通过vue3实例说说declare module语法怎么用🦕模块声明篇](https://juejin.cn/post/7008710181769084964)
 
+[新开发vscode插件: ⚡any-type, 一键json到ts类型](https://juejin.cn/post/7055097715994132516)
 ## 微信群
 
 由于腾讯对微信群的 100 人限制, 超过 100 人后必须由我拉进去.
 
-![](https://user-gold-cdn.xitu.io/2019/9/19/16d474d245b69492?w=512&h=512&f=jpeg&s=27137)
+![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/41d88adec9564f5aaef95f8bc4b4cdfc~tplv-k3u1fbpfcp-zoom-1.image)
