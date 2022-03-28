@@ -1,6 +1,6 @@
 {
   "name": "@any86/click-outside",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "点击指定元素之外触发",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -11,7 +11,9 @@
     "clickOutside",
     "click-outside"
   ],
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "author": "any86",
   "homepage": "https://github.com/any86/my/packages/clickOutside#readme",
   "license": "ISC",

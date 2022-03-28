@@ -1,6 +1,6 @@
 {
   "name": "@any86/quick-sort",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "快速排序",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -10,7 +10,9 @@
     "sort",
     "quick-sort"
   ],
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "author": "any86",
   "homepage": "https://github.com/any86/my/packages/clickOutside#readme",
   "license": "ISC",
