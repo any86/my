@@ -11,13 +11,13 @@ module.exports = {
     collectCoverageFrom: [
         'packages/*/src/**/*.ts'],
     verbose: false,
-    testPathIgnorePatterns: ["<rootDir>/node_modules/","<rootDir>/packages/simulator/"],
-    coveragePathIgnorePatterns: ["<rootDir>/node_modules/","<rootDir>/packages/simulator/"],
     globals: {
         __TEST__: true,
+        __VERSION__: require('./package.json').version,
+        ontouchstart: null
     },
     moduleFileExtensions: ['ts', 'tsx', 'js', 'json'],
     moduleNameMapper: {
-        '^@any86/(.*?)$': '<rootDir>/packages/$1/src',
+        '^@any86/(.*?)$': '<rootDir>/packages/$1/src'
     },
 };

@@ -10,6 +10,24 @@ importers:
       lerna: 4.0.0
       rimraf: 3.0.2
 
+  packages/array-to-tree:
+    specifiers:
+      '@any86/quick-sort': ^0.0.5
+      '@types/jest': ^27.1.4
+      jest: ^27.0.0
+      rimraf: ^3.0.2
+      terser: ^5.0.0
+      ts-jest: ^27.0.0
+      typescript: ^4.6.0
+    devDependencies:
+      '@any86/quick-sort': link:../quick-sort
+      '@types/jest': 27.4.1
+      jest: 27.5.1
+      rimraf: 3.0.2
+      terser: 5.12.1
+      ts-jest: 27.1.4_9985e1834e803358b7be1e6ce5ca0eea
+      typescript: 4.6.3
+
   packages/click-outside:
     specifiers:
       '@types/jest': ^27.1.4
@@ -2513,6 +2531,7 @@ packages:
 
   /encoding/0.1.13:
     resolution: {integrity: sha512-ETBauow1T35Y/WZMkio9jiM0Z5xjHHmJ4XmjZOq1l/dXz3lr2sRn87nJy20RupqSh1F2m3HHPSp8ShIPQJrJ3A==}
+    requiresBuild: true
     dependencies:
       iconv-lite: 0.6.3
     dev: true
