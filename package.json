@@ -11,8 +11,10 @@
         "rimraf": "^3.0.2"
     },
     "scripts": {
-        "release:next": "lerna publish  from-package --force-publish --dist-tag next",
-        "release:latest": "lerna publish  from-package --force-publish"
+        "release:next": "lerna publish --force-publish --dist-tag next",
+        "release:latest": "lerna publish --force-publish",
+        "release:p:next": "lerna publish  from-package --force-publish --dist-tag next",
+        "release:p:latest": "lerna publish  from-package --force-publish"
     },
     "repository": {
         "type": "git",
