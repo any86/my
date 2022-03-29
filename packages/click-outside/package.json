@@ -1,6 +1,6 @@
 {
   "name": "@any86/click-outside",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "点击指定元素之外触发",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
