@@ -5,6 +5,9 @@
     "workspaces": [
         "packages/*"
     ],
+    "publishConfig": {
+        "access": "public"
+      },
     "description": "常用的代码集合",
     "devDependencies": {
         "lerna": "^4.0.0",
