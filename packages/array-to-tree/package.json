@@ -1,6 +1,6 @@
 {
   "name": "@any86/array-to-tree",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "数组转树",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -43,5 +43,5 @@
     "ts-jest": "^27.0.0",
     "typescript": "^4.6.0"
   },
-  "gitHead": "2b4e3191e7a9fb8a8d2d96068a9bd6960b665845"
+  "gitHead": "b2c16c29a71f24edf6e224c53c737198cad584e6"
 }
