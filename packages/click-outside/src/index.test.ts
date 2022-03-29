@@ -1,4 +1,4 @@
-import clickOutside from '../src/index';
+import clickOutside from './index';
 test('点击元素外触发回调', done => {
     const onClick = jest.fn();
     const el = document.createElement('div');
