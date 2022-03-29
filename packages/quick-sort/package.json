@@ -1,6 +1,6 @@
 {
   "name": "@any86/quick-sort",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "快速排序",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

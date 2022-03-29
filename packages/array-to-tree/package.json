@@ -1,6 +1,6 @@
 {
   "name": "@any86/array-to-tree",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "数组转树",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -35,7 +35,7 @@
     "url": "https://github.com/any86/my/issues"
   },
   "dependencies": {
-    "@any86/quick-sort": "^0.0.6"
+    "@any86/quick-sort": "^0.0.7"
   },
   "devDependencies": {
     "@types/jest": "^27.1.4",
