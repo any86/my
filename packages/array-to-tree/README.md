@@ -98,30 +98,21 @@ arr2tree(arr, {
 ```
 
 ### 自定义返回节点结构
-
+注意不要删除或者结构node, 这里只可以对他附加属性, 否则无法形成树. 这里相当于遍历节点, 所以一些需要虚幻的操作可以放在这里.
 ```javascript
-const arr = [
-  { xxid: 1, xxorder: 1 },
-  { xxid: 2, xxpid: 1, xxorder: 2 },
+const array = [
+  { id: 1, order: 1 },
+  { id: 2, pid: 1, order: 2 },
 ];
-function transform(node) {
-  // 如果返回undefined, 那么当前节点就不会出现在树中.
-  return { key: node.id, pKey: node.pid };
+function transform(node: any) {
+  if (2 === node.id) {
+    node.category = "植物";
+  }
+  return node;
 }
 
-arr2tree(arr, {
-  KEY_ID: "xxid",
-  KEY_PID: "xxpid",
-  transform,
-});
-
 // 输出
-// [{
-//     key:1,
-//     children:[
-//         {key:2, pKey:1}
-//     ]
-// }]
+// [{ id: 1, order: 1, children: [{ id: 2, pid: 1, order: 2, category: '植物' }] }]
 ```
 
 ### 自定义根节点的判断条件

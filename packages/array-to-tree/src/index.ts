@@ -2,6 +2,14 @@ import quickSort from '@any86/quick-sort'
 type Node = Record<string | number, any>;
 type NodeMap = Record<string, Node[]>;
 type CompareOrder = (a: Node, b: Node) => number;
+interface Options {
+    KEY_ID?: string;
+    KEY_PID?: string;
+    KEY_CHILDREN?: string;
+    compareOrder?: CompareOrder;
+    transform?: (node: Node) => Node | void;
+    isRoot?: (node: Node) => boolean;
+}
 
 /**
  * 数组转树
@@ -19,13 +27,12 @@ const DEFAULT_OPTIONS = {
     KEY_CHILDREN: 'children',
     compareOrder: ((a: Node, b: Node) => b.order - a.order) as CompareOrder,
     transform: (node: Node): Node | void => node,
-    isRoot: (node: Node) => !node[DEFAULT_OPTIONS.KEY_PID]
 }
 
-export default function (array: Node[], options?: Partial<typeof DEFAULT_OPTIONS>) {
+export default function (array: Node[], options: Options = {}) {
     // 默认值
-    const { KEY_ID, KEY_CHILDREN, KEY_PID, compareOrder, transform, isRoot } = { ...DEFAULT_OPTIONS, ...options };
-
+    const { KEY_ID, KEY_CHILDREN, KEY_PID, compareOrder, transform } = { ...DEFAULT_OPTIONS, ...options };
+    const isRoot = options.isRoot || ((node: Node) => !node[KEY_PID])
     let tree = [];
     let pidAndChildrenMap: NodeMap | null = {};
 
@@ -61,7 +68,8 @@ export default function (array: Node[], options?: Partial<typeof DEFAULT_OPTIONS
 
     // 删除空的children字段
     for (const node of array) {
-        if (0 === node.children.length) {
+        // transform后可能是undefined
+        if (0 === node[KEY_CHILDREN]?.length) {
             delete node[KEY_CHILDREN]
         }
     }
