@@ -1,20 +1,18 @@
-# 常用短代码 [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lerna.js.org/)
+# 常用短代码 [![lerna](https://img.shields.io/badge/packages-lerna-cc00ff.svg)]() [![lerna](https://img.shields.io/badge/lang-TypeScript-blue)]()
 
 代码都不长, 都用 **typescript** 实现, 方便大家学习 typescript.
 
-## 为什么?
-
-1. 使用**最少**代码实现一个完整功能, **🔥 让大家更容易学习 ts**.
-2. 目标代码轻量, 方便大家用更少的**碎片时间**来参与项目.
-3. 做很多"轻代码", 希望总有一块成为你的"**砖**".
+## 安装
+```shell
+npm i @any86/quick-sort -S
+npm i @any86/click-outside -S
+```
 
 ## 有什么?
 
-[@any86/quick-sort](packages/quick-sort)
-快速排序.
+[@any86/quick-sort](packages/quick-sort) 快速排序.
 
-[@any86/click-outside](packages/click-outside)
-点击指定元素外部触发回调.
+[@any86/click-outside](packages/click-outside) 点击元素外部触发回调.
 
 
 ## 📚 typescript 基础
@@ -36,6 +34,7 @@
 [第七课, 通过vue3实例说说declare module语法怎么用🦕模块声明篇](https://juejin.cn/post/7008710181769084964)
 
 [新开发vscode插件: ⚡any-type, 一键json到ts类型](https://juejin.cn/post/7055097715994132516)
+
 ## 微信群
 
 由于腾讯对微信群的 100 人限制, 超过 100 人后必须由我拉进去.
