@@ -33,7 +33,7 @@
     "moduleResolution": "node",
     "baseUrl": ".",
     "paths": {
-      "@any86/*": ["packages/*/src"]
+      // "@any86/*": ["packages/*/src"]
     }
   }
 }

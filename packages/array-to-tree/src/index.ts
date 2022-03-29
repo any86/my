@@ -1,4 +1,5 @@
-import quickSort from '@any86/quick-sort'
+import quickSort from '@any86/quick-sort';
+
 type Node = Record<string | number, any>;
 type NodeMap = Record<string, Node[]>;
 type CompareOrder = (a: Node, b: Node) => number;

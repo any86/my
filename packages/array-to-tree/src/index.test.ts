@@ -40,7 +40,6 @@ test('节点键值不标准', () => {
     KEY_ID: "xxid",
     KEY_PID: "xxpid",
   });
-  console.log(array2);
   expect(array2).toMatchObject([{ xxid: 1, children: [{ xxid: 2, xxpid: 1 }] }])
 })
 
