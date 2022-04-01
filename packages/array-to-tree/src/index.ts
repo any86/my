@@ -1,5 +1,4 @@
 import quickSort from '@any86/quick-sort';
-
 type Node = Record<string | number, any>;
 type NodeMap = Record<string, Node[]>;
 type CompareOrder = (a: Node, b: Node) => number;
@@ -11,6 +10,7 @@ interface Options {
     transform?: (node: Node) => Node | void;
     isRoot?: (node: Node) => boolean;
 }
+
 
 /**
  * 数组转树
@@ -44,9 +44,7 @@ export default function (array: Node[], options: Options = {}) {
 
         if (isRoot(node)) {
             // 根节点
-            if (void 0 !== currentNode) {
-                tree.push(currentNode);
-            }
+            tree.push(currentNode);
         } else {
             // 非根节点
             if (void 0 === pidAndChildrenMap[pid]) {

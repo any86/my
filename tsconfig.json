@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "resolveJsonModule":true,
     // 不报告执行不到的代码错误。
     "allowUnreachableCode": true,
     "strictNullChecks": true,
@@ -11,7 +12,7 @@
     // 目标js的版本
     "target": "es6",
     // 目标代码的模块结构版本
-    "module": "CommonJS",
+    // "module": "CommonJS",
     // 在表达式和声明上有隐含的 any类型时报错。
     "noImplicitAny": true,
     // 删除注释
@@ -33,7 +34,7 @@
     "moduleResolution": "node",
     "baseUrl": ".",
     "paths": {
-      // "@any86/*": ["packages/*/src"]
+      "@any86/*": ["packages/*/src"]
     }
   }
 }

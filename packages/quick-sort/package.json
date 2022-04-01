@@ -28,8 +28,8 @@
   },
   "scripts": {
     "test": "jest",
-    "dev": "rimraf dist && tsc -w",
-    "build": "rimraf dist && tsc && terser dist/index.js -o dist/index.min.js"
+    "dev": "rimraf dist && rollup -c  --watch --environment NODE_ENV:development",
+    "build": "rimraf dist && rollup -c"
   },
   "bugs": {
     "url": "https://github.com/any86/my/issues"
@@ -40,6 +40,9 @@
     "rimraf": "^3.0.2",
     "terser": "^5.0.0",
     "ts-jest": "^27.0.0",
-    "typescript": "^4.6.0"
+    "typescript": "^4.6.0",
+    "rollup": "^2.70.1",
+    "@rollup/plugin-typescript": "^8.3.1",
+    "tslib": "^2.3.1"
   }
 }

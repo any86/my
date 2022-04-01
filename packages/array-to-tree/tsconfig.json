@@ -1,8 +1,7 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "outDir": "dist",
-    "declarationDir": "dist"
+    "declaration": false
   },
-  "include": ["src/index.ts","@any86/quick-sort"]
+  "include": ["src/index.ts"]
 }

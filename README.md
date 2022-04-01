@@ -4,11 +4,14 @@
 
 ## 安装
 ```shell
+npm i @any86/array-to-tree -S
 npm i @any86/quick-sort -S
 npm i @any86/click-outside -S
 ```
 
 ## 有什么?
+
+[@any86/array-to-tree](packages/array-to-tree) 数组变树.
 
 [@any86/quick-sort](packages/quick-sort) 快速排序.
 
