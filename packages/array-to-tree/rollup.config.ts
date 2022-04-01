@@ -1,7 +1,7 @@
 
 const typescript = require('rollup-plugin-typescript2');
+import { terser } from "rollup-plugin-terser";
 import { defineConfig } from 'rollup';
-import dts from "rollup-plugin-dts";
 import pkg from './package.json';
 
 export default defineConfig({
@@ -12,7 +12,7 @@ export default defineConfig({
             exclude: 'node_modules/**',
             typescript: require('typescript'),
         }),
-        dts()
+        terser()
     ],
 
     external: id => Object.keys(pkg.dependencies).includes(id) || /^@any86/.test(id),
@@ -32,6 +32,5 @@ export default defineConfig({
         sourcemap: true,
         globals: { '@any86/quick-sort': 'quickSort' }
     },
-    { file: "./dist/index.d.ts"}
     ]
 });

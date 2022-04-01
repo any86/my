@@ -33,8 +33,5 @@
     // 此处设置为node,才能解析import xx from 'xx'
     "moduleResolution": "node",
     "baseUrl": ".",
-    "paths": {
-      "@any86/*": ["packages/*/src"]
-    }
   }
 }
