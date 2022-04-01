@@ -1,12 +1,12 @@
 import quickSort from '@any86/quick-sort';
-type Node = Record<string | number, any>;
-type NodeMap = Record<string, Node[]>;
-type CompareOrder = (a: Node, b: Node) => number;
-interface Options {
+type KV = Record<string | number, any>;
+type NodeMap<Node> = Record<string, Node[]>;
+type CompareOrder<Node> = (a: Node, b: Node) => number;
+interface Options<Node> {
     KEY_ID?: string;
     KEY_PID?: string;
     KEY_CHILDREN?: string;
-    compareOrder?: CompareOrder;
+    compareOrder?: CompareOrder<Node>;
     transform?: (node: Node) => Node | void;
     isRoot?: (node: Node) => boolean;
 }
@@ -22,20 +22,22 @@ interface Options {
  * @param options.transform 控制节点的返回格式
  * @returns 树结构
  */
-const DEFAULT_OPTIONS = {
-    KEY_ID: 'id',
-    KEY_PID: 'pid',
-    KEY_CHILDREN: 'children',
-    compareOrder: ((a: Node, b: Node) => b.order - a.order) as CompareOrder,
-    transform: (node: Node): Node | void => node,
-}
 
-export default function (array: Node[], options: Options = {}) {
+export default function <Node extends KV>(array: Node[], options: Options<Node> = {}): Node[] {
     // 默认值
-    const { KEY_ID, KEY_CHILDREN, KEY_PID, compareOrder, transform } = { ...DEFAULT_OPTIONS, ...options };
-    const isRoot = options.isRoot || ((node: Node) => !node[KEY_PID])
+    const { KEY_ID, KEY_CHILDREN, KEY_PID, compareOrder, transform } = {
+        KEY_ID: 'id',
+        KEY_PID: 'pid',
+        KEY_CHILDREN: 'children',
+        compareOrder: ((a: Node, b: Node) => b.order - a.order) as CompareOrder<Node>,
+        transform: (node: Node): Node & KV | void => node,
+        ...options
+    };
+
+    const isRoot = options.isRoot || ((node: Node) => !node[KEY_PID]);
+    
     let tree = [];
-    let pidAndChildrenMap: NodeMap | null = {};
+    let pidAndChildrenMap: NodeMap<Node> | null = {};
 
     for (const node of array) {
         const { [KEY_ID]: id, [KEY_PID]: pid } = node;
@@ -62,7 +64,7 @@ export default function (array: Node[], options: Options = {}) {
         }
 
         // 让每个节点的children指向pidChildrenMap中的值
-        currentNode[KEY_CHILDREN] = pidAndChildrenMap[id];
+        currentNode[KEY_CHILDREN as any] = pidAndChildrenMap[id];
     }
 
     // 删除空的children字段
