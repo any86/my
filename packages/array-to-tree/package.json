@@ -36,7 +36,7 @@
     "url": "https://github.com/any86/my/issues"
   },
   "dependencies": {
-    "@any86/quick-sort": "workspace:^0.0.7"
+    "@any86/quick-sort": "^0.0.7"
   },
   "gitHead": "b2c16c29a71f24edf6e224c53c737198cad584e6"
 }
