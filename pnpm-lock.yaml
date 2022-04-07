@@ -28,7 +28,7 @@ importers:
 
   packages/array-to-tree:
     specifiers:
-      '@any86/quick-sort': workspace:^0.0.7
+      '@any86/quick-sort': ^0.0.8
     dependencies:
       '@any86/quick-sort': link:../quick-sort
 
