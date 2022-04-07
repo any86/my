@@ -48,8 +48,10 @@ function swap(array: unknown[], i: number, j: number) {
  * @returns 
  */
 export default function quickSort<Item = number>(array: Item[], compareFn: Compare<Item> = compareNumber as any): Item[] {
+    const {length} = array;
+    if(0 === length) return array;
     const startIndex = 0;
-    const endIndex = array.length - 1;
+    const endIndex = length - 1;
 
     const stack: [number, number][] = [];
     stack.push([startIndex, endIndex]);

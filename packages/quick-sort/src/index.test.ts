@@ -1,4 +1,9 @@
 import qsort from './index';
+
+test('空数组', () => {
+    expect(qsort([])).toMatchObject([]);
+});
+
 test('是否有返回值', () => {
     expect(qsort([1, 2, 3, 4, 5, 6])).toMatchObject([1, 2, 3, 4, 5, 6]);
     expect(qsort([6, 5, 4, 3, 2, 1])).toMatchObject([1, 2, 3, 4, 5, 6]);
