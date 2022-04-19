@@ -30,9 +30,12 @@ importers:
     specifiers:
       '@any86/quick-sort': ^0.0.8
     dependencies:
-      '@any86/quick-sort': link:../quick-sort
+      '@any86/quick-sort': 0.0.8
 
   packages/click-outside:
+    specifiers: {}
+
+  packages/loadImage:
     specifiers: {}
 
   packages/quick-sort:
@@ -46,6 +49,10 @@ packages:
     dependencies:
       '@jridgewell/trace-mapping': 0.3.4
     dev: true
+
+  /@any86/quick-sort/0.0.8:
+    resolution: {integrity: sha512-78O2jThntTd7XFbzu0uqXGNI/uoZhP8OSav8LqgcGA9L/+dGM2JbZw1ajNmpi+o03BtGSwLx2tFYhJA9EdNbJg==}
+    dev: false
 
   /@babel/code-frame/7.16.7:
     resolution: {integrity: sha512-iAXqUn8IIeBTNd72xsFlgaXHkMBMt6y4HJp1tIaK465CWLT/fG1aqB7ykr95gHHmlBdGbFeWWfyB4NJJ0nmeIg==}
