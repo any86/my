@@ -7,6 +7,7 @@
 npm i @any86/array-to-tree -S
 npm i @any86/quick-sort -S
 npm i @any86/click-outside -S
+...
 ```
 
 ## 有什么?
@@ -16,6 +17,11 @@ npm i @any86/click-outside -S
 [@any86/quick-sort](packages/quick-sort) 快速排序.
 
 [@any86/click-outside](packages/click-outside) 点击元素外部触发回调.
+
+[@any86/load-image](packages/load-image) 加载图片.
+
+[@any86/sleep](packages/sleep) 暂停.
+
 
 
 ## 📚 typescript 基础
