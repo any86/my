@@ -1,26 +1,26 @@
-# @any86/quick-sort
+# @any86/load-image
 [![NPM Version][npm-image]][npm-url]
 
-[npm-image]: https://badgen.net/npm/v/@any86/quick-sort
-[npm-url]: https://npmjs.org/package/@any86/quick-sort
+[npm-image]: https://badgen.net/npm/v/@any86/load-image
+[npm-url]: https://npmjs.org/package/@any86/load-image
 
-快速排序, 原地排序, 非递归版本.
+加载图片
 
 ## 安装
 ```shell
-npm i -S @any86/quick-sort
+npm i -S @any86/load-image
 ```
 
 ## 快速开始
 
 ```javascript
-import qSort from '@any86/quick-sort';
+import loadImage from '@any86/load-image';
 
-// 正序排列
-const array1 = [100,1,99];
-const arraySorted = qSort(array);
-
-// 倒序排列, 指定排序的字段
-const array1 = [{a:100},{a:1},{a:99}];
-const array1Sorted = qSort(array1, (a,b)=>b.a-a.a);
+loadImage(url).then(image=>{
+    // 加载成功
+    // 图片对象,
+    console.log(image.width) // 图片宽度 
+}).catch(e=>{
+    // 加载失败
+})
 ```
