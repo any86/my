@@ -1,7 +1,7 @@
 {
   "name": "@any86/repeat",
-  "version": "0.0.1",
-  "description": "睡眠",
+  "version": "0.0.2",
+  "description": "重复执行, 执行结果队列到数组中",
   "main": "dist/index.cjs.js",
   "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
