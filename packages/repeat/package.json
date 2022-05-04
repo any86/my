@@ -1,0 +1,37 @@
+{
+  "name": "@any86/repeat",
+  "version": "0.0.1",
+  "description": "睡眠",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.es.js",
+  "types": "dist/index.d.ts",
+  "unpkg": "dist/index.min.js",
+  "jsdelivr": "dist/index.min.js",
+  "keywords": [
+    "repeat"
+  ],
+  "files": [
+    "dist"
+  ],
+  "author": "any86",
+  "homepage": "https://github.com/any86/my/packages/repeat#readme",
+  "license": "ISC",
+  "directories": {
+    "test": "__tests__"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/any86/my.git"
+  },
+  "scripts": {
+    "test": "jest",
+    "dev": "rimraf dist && rollup -c  --watch --environment NODE_ENV:development",
+    "build": "rimraf dist && rollup -c"
+  },
+  "bugs": {
+    "url": "https://github.com/any86/my/issues"
+  }
+}
