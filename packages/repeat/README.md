@@ -7,7 +7,7 @@
 [size-image]: https://badgen.net/bundlephobia/minzip/@any86/repeat
 [size-url]: https://bundlephobia.com/result?p=@any86/repeat
 
-安次数循环
+按次数循环
 
 ## 安装
 
