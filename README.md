@@ -22,6 +22,9 @@ npm i @any86/click-outside -S
 
 [@any86/sleep](packages/sleep) 暂停.
 
+[@any86/repeat](packages/repeat) 按次数循环.
+
+
 
 
 ## 📚 typescript 基础
