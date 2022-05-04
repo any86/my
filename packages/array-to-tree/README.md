@@ -1,7 +1,9 @@
-# @any86/array-to-tree [![NPM Version][npm-image]][npm-url] [![Node CI](https://github.com/any86/arr2tree/actions/workflows/nodejs.yml/badge.svg)](https://github.com/any86/arr2tree/actions/workflows/nodejs.yml)
+# @any86/array-to-tree [![NPM Version][npm-image]][npm-url] [![Size][size-image]][size-url] [![Node CI](https://github.com/any86/arr2tree/actions/workflows/nodejs.yml/badge.svg)](https://github.com/any86/arr2tree/actions/workflows/nodejs.yml)
 
 [npm-image]: https://badgen.net/npm/v/@any86/array-to-tree
 [npm-url]: https://npmjs.org/package/@any86/array-to-tree
+[size-image]: https://badgen.net/bundlephobia/minzip/@any86/array-to-tree
+[size-url]: https://bundlephobia.com/result?p=@any86/array-to-tree
 
 🌲 数组转树
 
@@ -98,7 +100,9 @@ arr2tree(arr, {
 ```
 
 ### 自定义返回节点结构
-注意不要删除或者结构node, 这里只可以对他附加属性, 否则无法形成树. 这里相当于遍历节点, 所以一些需要虚幻的操作可以放在这里.
+
+注意不要删除或者结构 node, 这里只可以对他附加属性, 否则无法形成树. 这里相当于遍历节点, 所以一些需要虚幻的操作可以放在这里.
+
 ```javascript
 const array = [
   { id: 1, order: 1 },

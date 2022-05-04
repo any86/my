@@ -1,8 +1,10 @@
 # @any86/click-outside
-[![NPM Version][npm-image]][npm-url]
+[![NPM Version][npm-image]][npm-url] [![Size][size-image]][size-url]
 
 [npm-image]: https://badgen.net/npm/v/@any86/click-outside
 [npm-url]: https://npmjs.org/package/@any86/click-outside
+[size-image]: https://badgen.net/bundlephobia/minzip/@any86/click-outside
+[size-url]: https://bundlephobia.com/result?p=@any86/click-outside
 
 点击指点元素外部触发回调, 支持手机/桌面端.
 

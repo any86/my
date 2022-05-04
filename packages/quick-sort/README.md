@@ -1,8 +1,11 @@
 # @any86/quick-sort
-[![NPM Version][npm-image]][npm-url]
+[![NPM Version][npm-image]][npm-url] [![Size][size-image]][size-url]
 
 [npm-image]: https://badgen.net/npm/v/@any86/quick-sort
 [npm-url]: https://npmjs.org/package/@any86/quick-sort
+[size-image]: https://badgen.net/bundlephobia/minzip/@any86/quick-sort
+[size-url]: https://bundlephobia.com/result?p=@any86/quick-sort
+
 
 快速排序, 原地排序, 非递归版本.
 
